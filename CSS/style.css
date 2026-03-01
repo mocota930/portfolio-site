@@ -9,11 +9,11 @@
 .toppage {
     background-color: #4de4ea;
     border-radius: 50px;
-    height: 95vh;
-    margin: 15px;
+    height: 90vh;
+    margin: 30px;
     position: relative;
 }
-/* ハンバーガーの大きさ */
+/* ヒーロビューのイラストの大きさ */
 h1 img {
     position: absolute;
     max-width: 300px;
@@ -38,8 +38,8 @@ h1 img {
 
 .hamburger_wrapper ul {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
 
 }
 
@@ -108,6 +108,7 @@ font-family: "Fredoka", sans-serif;
     color: #1500ff;
     font-size: 50px;
 font-weight: 600;
+margin: 40px;
 }
 
 /* スキル */
@@ -129,7 +130,7 @@ font-weight: 600;
 /* グリッド配置 */
 .skill-list {
   max-width: 1100px;
-  margin: 30px auto 0;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
