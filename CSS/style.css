@@ -12,15 +12,16 @@
     height: 95vh;
     margin: 15px;
     position: relative;
-    /* border: 2px orange solid; */
 }
-
+/* ハンバーガーの大きさ */
 h1 img {
     position: absolute;
     max-width: 300px;
-    top: 50%;
+    /* top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    inset:0;
+    margin: auto;
 }
 
 /* ハンバーガーメニュー */
@@ -111,54 +112,77 @@ font-weight: 600;
 
 /* スキル */
 
-/* セクションの左右余白 */
-.section_inner { padding: 40px 24px; }
+@media (min-width: 768px) {
+  .section_skill {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
 
-/* 配置　PCは3列固定 */
+/* セクション内余白 */
+.section_skill .section_inner {
+  width: 100%;
+  padding: 40px 24px;
+}
+
+/* グリッド配置 */
 .skill-list {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1100px;
+  margin: 30px auto 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 基本3列 */
-  gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
-/* 配置　スマホは２列 */
-@media (max-width: 600px) {
-  .skill-list { grid-template-columns: repeat(2, 1fr); }
+/* スマホは2列 */
+@media (max-width: 767px) {
+  .skill-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
+/* 各スキル中央寄せ＆少しコンパクトに */
+.skill-item {
+  max-width: 260px;
+  margin: 0 auto;
+  text-align: center;
+}
 
-.skill-item { text-align: center; }
-
-/* ピザの親 — 正方形（列幅に合わせる） */
+/* ピザ */
 .pizza-wrap {
   width: 100%;
-  aspect-ratio: 1 / 1;   /* 正方形にしておく */
-  position: relative;    /* 絶対配置の子を基準にする */
-  overflow: hidden;      /* はみ出しを隠す */
+  aspect-ratio: 1 / 1;
+  position: relative;
 }
 
-/* ピザのimgそれぞれの位置と消え方の設定 */
 .pizza-slice {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;              /* top/left/width/heightまとめて書ける */
   width: 100%;
   height: 100%;
-  object-fit: contain; /* 画像のアスペクト比を保ちつつ、ピザ全体が見えるようにする */
-  transition: opacity 0.45s ease, transform 0.45s ease;
+  object-fit: contain;
+  transition: 0.4s ease;
 }
 
-/* ピザのスライスが消えるときのアニメーション */
 .pizza-slice.hide {
   opacity: 0;
   transform: translateY(10px);
 }
 
 /* テキスト */
-.skill-name { margin-top: 14px; font-weight: 700; }
-.skill-text { margin-top: 8px; color: #333; line-height: 1.5; font-size: 14px; }
+.skill-name {
+  margin-top: 12px;
+  font-weight: 700;
+}
+
+  .skill-text {
+  max-width: 300px;
+  margin: 8px auto 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
 
 /* フッター */
 /* .plaid {
