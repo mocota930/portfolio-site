@@ -170,7 +170,15 @@ margin: 40px;
   opacity: 0;
   transform: translateY(10px);
 }
-
+/* お皿 */
+.pizza-dish {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: -1;
+}
 /* テキスト */
 .skill-name {
   margin-top: 12px;
