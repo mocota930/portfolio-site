@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+
+* {
+    border: solid 1px magenta;
+}
+
+/* トップページ */
+.toppage {
+    background-color: #4de4ea;
+    border-radius: 50px;
+    height: 95vh;
+    margin: 15px;
+    position: relative;
+    /* border: 2px orange solid; */
+}
+
+h1 img {
+    position: absolute;
+    max-width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ハンバーガーメニュー */
+.hamburger_wrapper {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+}
+
+.hamburger img {
+    width: 100%;
+}
+
+.hamburger_wrapper ul {
+    position: relative;
+    width: 100px;
+    height: 100px;
+
+}
+
+
+.hamburger li {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hamburger_top {
+    z-index: 7;
+
+}
+
+.hamburger_home {
+    z-index: 6;
+}
+
+.hamburger_about {
+    z-index: 5;
+}
+
+.hamburger_skill {
+    z-index: 4;
+}
+
+.hamburger_work {
+    z-index: 3;
+}
+
+.hamburger_contact {
+    z-index: 2;
+}
+
+.hamburger_bottom {
+    z-index: 1;
+}
+
+.hamburger a {
+    position: relative;
+    display: block;
+}
+
+/* はんばーがーめにゅーの文字の位置など */
+.hamburger span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* クリックした時にハンバーガーが展開し、文字が表示される */
+.hamburger .is-open span {
+    opacity: 1;
+}
+
+h2 {
+    text-align: center;
+    font-family: "Mochiy Pop One", sans-serif;
+    color: #ffffff;
+    font-size: 50px;
+    text-shadow: 3px #1500ff;
+    -webkit-text-stroke: 3px #1500ff;
+}
+
+/* スキル */
+/* セクション余白（両サイドに少し空白） */
+.skills {
+    padding: 60px 24px;
+}
+
+/* 全体幅制御 */
+.skill-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 60px 40px;
+}
+/* ピザのIMGの大きさ */
+.pizza-wrap img {
+    width: 100%;
+    height: 200px;
+}
+
+/* スマホだけ2列に変更 */
+@media (max-width: 600px) {
+.skill-list {
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+
+/* 1セット */
+.skill-item {
+text-align: center;
+}
+
+/* ピザのサイズは列幅に合わせて自動縮小 */
+.pizza-wrap {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+}
+
+/* 8枚重ね */
+.pizza-slice {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* 消えるアニメーション */
+.pizza-slice.hide {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+/* スキル名 */
+.skill-name {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* テキスト（ピザ幅と同じ） */
+.skill-text {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* フッター */
+/* .plaid {
+    background-color: #fbfbfb;
+    background-image: linear-gradient(45deg, #0f1e2680 25%, transparent 25%, transparent 75%, #0f1e2680 75%), linear-gradient(45deg, #0f1e2680 25%, transparent 25%, transparent 75%, #0f1e2680 75%);
+    background-position: 0 0, 30px 30px;
+    background-size: 60px 60px;
+    height: 250px;
+} */
