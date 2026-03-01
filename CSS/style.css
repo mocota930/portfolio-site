@@ -1,9 +1,9 @@
 @charset "utf-8";
 
 
-* {
+/* * {
     border: solid 1px magenta;
-}
+} */
 
 /* トップページ */
 .toppage {
@@ -100,21 +100,21 @@ h1 img {
 .hamburger .is-open span {
     opacity: 1;
 }
-
+/* h２のテキスト設定 */
 h2 {
     text-align: center;
-    font-family: "Mochiy Pop One", sans-serif;
-    color: #ffffff;
+font-family: "Fredoka", sans-serif;
+    color: #1500ff;
     font-size: 50px;
-    text-shadow: 3px #1500ff;
-    -webkit-text-stroke: 3px #1500ff;
+font-weight: 600;
 }
 
 /* スキル */
+
 /* セクションの左右余白 */
 .section_inner { padding: 40px 24px; }
 
-/* グリッド（PCは3列固定） */
+/* 配置　PCは3列固定 */
 .skill-list {
   max-width: 1200px;
   margin: 0 auto;
@@ -123,12 +123,12 @@ h2 {
   gap: 50px;
 }
 
-/* スマホだけ2列に */
+/* 配置　スマホは２列 */
 @media (max-width: 600px) {
   .skill-list { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* 1セット（中央寄せ） */
+
 .skill-item { text-align: center; }
 
 /* ピザの親 — 正方形（列幅に合わせる） */
@@ -139,19 +139,18 @@ h2 {
   overflow: hidden;      /* はみ出しを隠す */
 }
 
-/* 8枚のスライスを重ねる設定 */
+/* ピザのimgそれぞれの位置と消え方の設定 */
 .pizza-slice {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* 画像の見え方を整える */
+  object-fit: contain; /* 画像のアスペクト比を保ちつつ、ピザ全体が見えるようにする */
   transition: opacity 0.45s ease, transform 0.45s ease;
-  /* z-indexはDOMの並びで重なり順が決まるので変更不要（必要なら設定可） */
 }
 
-/* 消える見た目 */
+/* ピザのスライスが消えるときのアニメーション */
 .pizza-slice.hide {
   opacity: 0;
   transform: translateY(10px);
