@@ -40,9 +40,7 @@ h1 img {
     position: relative;
     width: 90px;
     height: 90px;
-
 }
-
 
 .hamburger li {
     position: absolute;
@@ -96,6 +94,24 @@ h1 img {
     pointer-events: none;
     opacity: 0;
 }
+/* クリックした時に、ハンバーガーが展開し、した方向に具材が移動する。数値未定 */
+.hamburger-home .is-open {
+    transform: translateY( px);
+}
+.hamburger-about .is-open {
+    transform: translateY( px);
+}
+.hamburger-skill .is-open {
+    transform: translateY( px);
+}
+.hamburger-work .is-open {
+    transform: translateY( px);
+}
+.hamburger-contact .is-open {
+    transform: translateY( px);
+} 
+.hamburger-bottom .is-open {
+    transform: translateY( px);}
 
 /* クリックした時にハンバーガーが展開し、文字が表示される */
 .hamburger .is-open span {
