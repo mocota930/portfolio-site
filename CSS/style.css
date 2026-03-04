@@ -23,6 +23,15 @@ h1 img {
     inset:0;
     margin: auto;
 }
+/* ヒーロビューの画像。画像クリックで切り替わり */
+.hero-main .is-visible{opacity: 0;}
+
+.hero-sub{opacity: 0;}
+
+.hero-sub .is-visible {
+    opacity: 1;
+    /* transition: opacity 1s ease-in-out; */
+}
 
 /* ハンバーガーメニュー */
 .hamburger_wrapper {
