@@ -1,18 +1,12 @@
-// const hamburger = document.querySelector('.hamburger');
-// hamburger.addEventListener('click', function(e) {
-//     e.stopPropagation();
-//     hamburger.classList.toggle('is-open');
-//     if (hamburger.classList.contains('is-open')) {
-
 
 const hamburger = document.querySelector(".hamburger");
 const items = document.querySelectorAll(".hamburger li");
 
-// btnをクリックした時.is-openのクラスを足してください
+// btnをクリックした時.is-openのクラスを足す
 hamburger.addEventListener("click", (e) => {
-    hamburger.classList.add("is-open");
+    hamburger.classList.toggle("is-open");
     items.forEach(item => {
-        item.classList.add("is-open");
+        item.classList.toggle("is-open");
     });
 
     e.stopPropagation(); // 外クリック防止
@@ -26,9 +20,9 @@ burgerImages.forEach(img => {
 
         hamburger.classList.remove("is-open");
 
-        items.forEach(item => {
-            item.classList.remove("is-open");
-        });
+        // items.forEach(item => {
+        //     item.classList.remove("is-open");
+        // });
 
     });
 });
