@@ -3,29 +3,44 @@
 //     e.stopPropagation();
 //     hamburger.classList.toggle('is-open');
 //     if (hamburger.classList.contains('is-open')) {
-       
 
-// const burger = document.querySelector(".hamburger_wrapper");
-// const links = document.querySelectorAll(".hamburger li");
 
-// // btnをクリックした時.is-openのクラスを足してください
-// burger.addEventListener("click", () => {
-// 	burger.classList.toggle("is-open");
-// })
-// //具材をクリックした時上記の処理をリムーブする 
-// links.forEach((link) => {
-// 	link.addEventListener("click", () => {
-// 		burger.classList.remove("is-open");
-// 	})
-// })
-
-const burgerHome = document.querySelector(".hamburger-home");
-const burgerAbout = document.querySelector(".hamburger-about");
-const burgerSkill = document.querySelector(".hamburger-skill");
-const burgerContact = document.querySelector(".hamburger-contact");
-const links = document.querySelectorAll(".hamburger li");
+const hamburger = document.querySelector(".hamburger");
+const items = document.querySelectorAll(".hamburger li");
 
 // btnをクリックした時.is-openのクラスを足してください
-burgerHome.addEventListener("click", () => {
-    burgerHome.classList.toggle("is-open");
-}) 
+hamburger.addEventListener("click", (e) => {
+    hamburger.classList.add("is-open");
+    items.forEach(item => {
+        item.classList.add("is-open");
+    });
+
+    e.stopPropagation(); // 外クリック防止
+});
+
+//具材をクリックした時上記の処理をリムーブする 
+const burgerImages = document.querySelectorAll(".hamburger img");
+
+burgerImages.forEach(img => {
+    img.addEventListener("click", () => {
+
+        hamburger.classList.remove("is-open");
+
+        items.forEach(item => {
+            item.classList.remove("is-open");
+        });
+
+    });
+});
+
+
+// メニュー以外クリック → 閉じる
+document.addEventListener("click", () => {
+
+    hamburger.classList.remove("is-open");
+
+    items.forEach(item => {
+        item.classList.remove("is-open");
+    });
+
+});

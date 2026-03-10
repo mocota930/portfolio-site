@@ -6,14 +6,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>portfolio</title>
 	<!-- タイトルに表示される写真-->
-	<link rel="icon" href="./images/work/flyer01.jpg">
+	<link rel="icon" href="./images/img/hero02.png">
+	<!-- リセットCSS -->
 	<link rel="stylesheet" href="../CSS/reset.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<!-- グーグルフォント -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+	<!-- jQuery スリック -->
+	<!-- slick -->
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+	<link rel="stylesheet" href="./CSS/slick-theme.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<!-- スタイルCSS -->
 	<link rel="stylesheet" href="./CSS/style.css">
 </head>
 
@@ -23,54 +29,54 @@
 		<div class="toppage">
 			<h1 id="home">
 				<!-- ヒーロービューの写真　メイン -->
-				<img src="/images/img/hero01.png" alt="" class="hero-main">
+				<img src="/images/img/hero01.png" alt="パンケーキを食べる猫のイラスト" class="hero-main">
 				<!-- ヒーロービューの写真　クリック -->
-				<img src="./images/img/hero02.png" alt="" class="hero-sub">
+				<img src="./images/img/hero02.png" alt="パンケーキを食べる猫のイラスト" class="hero-sub">
 			</h1>
 		</div>
-		<div class="hamburger_wrapper">
+		<div class="hamburger-wrapper">
 			<nav class="hamburger">
 				<ul>
-					<li class="hamburger_top">
-						<img src="./images/hamburger manu/hamburger-01.png" alt="hamburger_top">
+					<li class="hamburger-top">
+						<img src="./images/hamburger manu/hamburger-01.png" alt="">
 
 					</li>
-					<li class="hamburger_home">
+					<li class="hamburger-home">
 						<a href="#home">
-							<img src="./images/hamburger manu/hamburger-02.png" alt="hamburger_home">
-							<span>HOME</span>
+							<img src="./images/hamburger manu/hamburger-02.png" alt="ホーム">
+							<!-- <span>HOME</span> -->
 						</a>
 					</li>
-					<li class="hamburger_about">
+					<li class="hamburger-about">
 						<a href="#about">
-							<img src="./images/hamburger manu/hamburger-03.png" alt="hamburger_about">
-							<span>ABOUT</span>
+							<img src="./images/hamburger manu/hamburger-03.png" alt="アバウト">
+							<!-- <span>ABOUT</span> -->
 						</a>
 					</li>
-					<li class="hamburger_skill">
+					<li class="hamburger-skill">
 						<a href="#skill">
-							<img src="./images/hamburger manu/hamburger-04.png" alt="hamburger_skill">
-							<span>SKILL</span>
+							<img src="./images/hamburger manu/hamburger-04.png" alt="スキル">
+							<!-- <span>SKILL</span> -->
 						</a>
 					</li>
 
-					<li class="hamburger_work">
+					<li class="hamburger-work">
 						<a href="#work">
-							<img src="./images/hamburger manu/hamburger-05.png" alt="hamburger_work">
-							<span>WORK</span>
+							<img src="./images/hamburger manu/hamburger-05.png" alt="ワーク">
+							<!-- <span>WORK</span> -->
 						</a>
 					</li>
 
-					<li class="hamburger_contact">
+					<li class="hamburger-contact">
 						<a href="#contact">
-							<img src="./images/hamburger manu/hamburger-06.png" alt="hamburger_contact">
-							<span>CONTACT</span>
+							<img src="./images/hamburger manu/hamburger-06.png" alt="コンタクト">
+							<!-- <span>CONTACT</span> -->
 						</a>
 					</li>
 
-					<li class="hamburger_bottom">
+					<li class="hamburger-bottom">
 
-						<img src="./images/hamburger manu/hamburger-07.png" alt="hamburger_bottom">
+						<img src="./images/hamburger manu/hamburger-07.png" alt="">
 
 					</li>
 				</ul>
@@ -95,7 +101,11 @@
 						</p>
 					</div>
 				</div>
-				<a href="about.html" class="hd-btn"><img src="./images/img/hd-btn.PNG" alt="もっと見る"></a>
+				<p class="hd-btn">
+					<a href="about.html">
+						<img src="./images/img/hd-btn.PNG" alt="もっと見る">
+					</a>
+				</p>
 			</div>
 		</section>
 
@@ -143,7 +153,6 @@
 						</p>
 					</div>
 					<!-- Git -->
-
 					<div class="skill-item" data-level="2">
 						<div class="pizza-wrap">
 							<img src="./images/skill-pizza/pizza-01.PNG" class="pizza-slice" alt="">
@@ -222,20 +231,56 @@
 		<section id="work" class="section_work">
 			<div class="section_inner">
 				<h2>Work</h2>
-				授業課題
+				<div class="slide-items__wrap">
+					<ul class="slide-items">
+						<li class="slide-items__item">
+							<img src="./images/work/flyer01.jpg" alt="">
+						</li>
+						<li class="slide-items__item">
+							<img src="./images/work/flyer02.jpg" alt="">
+						</li>
+						<li class="slide-items__item">
+							<img src="./images/work/shopCard.png" alt="">
+						</li>
+						<li class="slide-items__item">
+							<img src="./images/work/burger.png" alt="">
+						</li>
+						<!-- <li class="slide-items__item">
+							<img src="./images/work/map.png" alt="">
+						</li> -->
+					</ul>
+				</div>
+				<p class="hd-btn">
+					<a href="about.html">
+						<img src="./images/img/hd-btn.PNG" alt="もっと見る">
+					</a>
+				</p>
 			</div>
 		</section>
 
 		<section id="contact" class="section_contact">
 			<div class="section_inner">
 				<h2>Contact</h2>
-				メールアドレス
+				<p>下記メールアドレスor各種SNSにてご連絡ください。</p>
+				<a href="mailto:30808sugimotomoe@gmail.com">
+					<div class="address-area">
+						<address>30808sugimotomoe@gmail.com</address>
+					</div>
+					<div class="SNS-icon">
+						<a href="">
+							<img src="" alt="">
+						</a>
+						<a href=""></a>
+					</div>
+				</a>
 			</div>
 		</section>
 	</main>
 	<footer class="plaid">
 		<p><small>&copy; 2026 sugimoto moe</small></p>
 	</footer>
+	<!-- js -->
+	<script src="./js/slider.js"></script>
 	<script src="./js/hamburger.js"></script>
 	<script src="./js/pizza.js"></script>
 </body>

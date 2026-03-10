@@ -1,9 +1,9 @@
 @charset "utf-8";
 
 
-/* * {
+* {
     border: solid 1px magenta;
-} */
+}
 
 /* トップページ */
 .toppage {
@@ -13,6 +13,7 @@
     margin: 30px;
     position: relative;
 }
+
 /* ヒーロビューのイラストの大きさ */
 h1 img {
     position: absolute;
@@ -20,21 +21,26 @@ h1 img {
     /* top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); */
-    inset:0;
+    inset: 0;
     margin: auto;
 }
+
 /* ヒーロビューの画像。画像クリックで切り替わり */
-.hero-main .is-visible{opacity: 0;}
+.hero-main.is-visible {
+    opacity: 0;
+}
 
-.hero-sub{opacity: 0;}
+.hero-sub {
+    opacity: 0;
+}
 
-.hero-sub .is-visible {
+.hero-sub.is-visible {
     opacity: 1;
     /* transition: opacity 1s ease-in-out; */
 }
 
 /* ハンバーガーメニュー */
-.hamburger_wrapper {
+.hamburger-wrapper {
     position: fixed;
     top: 15px;
     right: 15px;
@@ -45,7 +51,7 @@ h1 img {
     width: 100%;
 }
 
-.hamburger_wrapper ul {
+.hamburger-wrapper ul {
     position: relative;
     width: 90px;
     height: 90px;
@@ -57,41 +63,41 @@ h1 img {
     left: 0;
 }
 
-.hamburger_top {
+.hamburger-top {
     z-index: 7;
 
 }
 
-.hamburger_home {
+.hamburger-home {
     z-index: 6;
 }
 
-.hamburger_about {
+.hamburger-about {
     z-index: 5;
 }
 
-.hamburger_skill {
+.hamburger-skill {
     z-index: 4;
 }
 
-.hamburger_work {
+.hamburger-work {
     z-index: 3;
 }
 
-.hamburger_contact {
+.hamburger-contact {
     z-index: 2;
 }
 
-.hamburger_bottom {
+.hamburger-bottom {
     z-index: 1;
 }
 
-.hamburger a {
+/* .hamburger a {
     position: relative;
     display: block;
 }
 
-/* はんばーがーめにゅーの文字の位置など */
+はんばーがーめにゅーの文字の位置など
 .hamburger span {
     position: absolute;
     top: 50%;
@@ -102,39 +108,53 @@ h1 img {
     color: #ffffff;
     pointer-events: none;
     opacity: 0;
-}
-/* クリックした時に、ハンバーガーが展開し、した方向に具材が移動する。数値未定 */
-.hamburger-home .is-open {
+} */
+
+/* クリックした時に、ハンバーガーが展開し、下方向に具材が移動する。 */
+.hamburger-home.is-open {
     transform: translateY(20px);
 }
-.hamburger-about .is-open {
+
+.hamburger-about.is-open {
     transform: translateY(40px);
 }
-.hamburger-skill .is-open {
+
+.hamburger-skill.is-open {
     transform: translateY(60px);
 }
-.hamburger-work .is-open {
+
+.hamburger-work.is-open {
     transform: translateY(80px);
 }
-.hamburger-contact .is-open {
-    transform: translateY(100px);
-} 
-.hamburger-bottom .is-open {
-    transform: translateY(120px );}
 
-/* クリックした時にハンバーガーが展開し、文字が表示される */
-.hamburger .is-open span {
-    opacity: 1;
+.hamburger-contact.is-open {
+    transform: translateY(100px);
 }
+
+.hamburger-bottom.is-open {
+    transform: translateY(120px);
+}
+
+/* クリックした時にハンバーガーが展開し、文字が表示される
+.hamburger.is-open span {
+    opacity: 1;
+} */
+
+/* 動きを滑らかにする */
+.hamburger li {
+    transition: transform 0.3s;
+}
+
 /* h２のテキスト設定 */
 h2 {
     text-align: center;
-font-family: "Fredoka", sans-serif;
+    font-family: "Fredoka", sans-serif;
     color: #1500ff;
     font-size: 50px;
-font-weight: 600;
-margin: 40px;
+    font-weight: 600;
+    margin: 40px;
 }
+
 /* アバウト 自己紹介 */
 .about-wrapper {
     display: flex;
@@ -143,113 +163,168 @@ margin: 40px;
     max-width: 1100px;
     margin: 0 auto;
 }
+
 .about-wrapper img {
     width: 300px;
     height: 300px;
     border-radius: 50%;
 }
+
 .about-wrapper p {
     font-size: 16px;
     line-height: 1.6;
     color: #333;
 }
+
 .about-wrapper p span {
     display: block;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 12px;
 }
-.section_about a img {
-    display: block;
-    margin: 20px auto 0;
-    width: 250px;
+
+/* もっと見るボタン */
+
+.hd-btn {
+    margin: 10px auto 0;
+    width: 200px;
     height: auto;
+    z-index: 100;
 }
-/* ボタンの範囲を画像の範囲のみにする */
-.hd-btn a {
-    display: block;
+
+.hd-btn img {
+    width: 100%;
 }
+
+
 
 /* スキル */
 
-@media (min-width: 768px) {
-.section_skill {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-}
-}
-
 /* セクション内余白 */
 .section_skill .section_inner {
-width: 100%;
-padding: 40px 24px;
+    width: 100%;
+    padding: 40px 24px;
 }
 
 /* グリッド配置 */
 .skill-list {
-max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
-/* スマホは2列 */
-@media (max-width: 767px) {
-  .skill-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 /* 各スキル中央寄せ＆少しコンパクトに */
 .skill-item {
-  max-width: 260px;
-  margin: 0 auto;
-  text-align: center;
+    max-width: 260px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* ピザ */
 .pizza-wrap {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
 }
 
 .pizza-slice {
-  position: absolute;
-  inset: 0;              /* top/left/width/heightまとめて書ける */
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: 0.4s ease;
+    position: absolute;
+    inset: 0;
+    /* top/left/width/heightまとめて書ける */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.4s ease;
 }
 
 .pizza-slice.hide {
-  opacity: 0;
-  transform: translateY(10px);
-}
-/* お皿 */
-.pizza-dish {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  z-index: -1;
-}
-/* テキスト */
-.skill-name {
-  margin-top: 12px;
-  font-weight: 700;
+    opacity: 0;
+    transform: translateY(10px);
 }
 
-  .skill-text {
-  max-width: 300px;
-  margin: 8px auto 0;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #333;
+/* お皿 */
+.pizza-dish {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: -1;
+}
+
+/* テキスト */
+.skill-name {
+    margin-top: 12px;
+    font-weight: 700;
+}
+
+.skill-text {
+    max-width: 300px;
+    margin: 8px auto 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* work*/
+.slide-items__wrap {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.slick-prev {
+    left: 10px;
+    z-index: 100;
+}
+
+.slick-next {
+    right: 10px;
+    z-index: 100;
+}
+
+.slide-items__item {
+    width: 200px;
+    margin: 0 20px;
+}
+
+.slide-items__item img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #1500ff;
+    font-size: 50px;
+}
+
+/* コンタクト */
+.section_contact p {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.address-area {
+    max-width: 500px;
+    height: auto;
+    background-color: #0044ff;
+    margin: 0 auto;
+    border-radius: 500px;
+}
+
+.address-area address {
+    text-align: center;
+    font-family: "Fredoka", sans-serif;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 600;
 }
 
 /* フッター */
@@ -260,9 +335,26 @@ max-width: 1100px;
     background-size: 60px 60px;
     height: 120px;
 }
+
 .plaid p {
-  font-size: 20px;
+    font-size: 20px;
     text-align: center;
     padding-top: 50px;
     color: #333;
+}
+
+/* レスポンシブ対応 */
+@media (min-width: 768px) {
+    .section_skill {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* スキルセクション　スマホだとピザ2列 */
+@media (max-width: 767px) {
+    .skill-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
