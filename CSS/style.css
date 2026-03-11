@@ -5,11 +5,91 @@
     border: solid 1px magenta;
 } */
 
+/* ページ内リンクの遷移をなめらかに */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ローディング画面 */
+/* .loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #4de4ea;
+    z-index: 555;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader .load-txt {
+    font-size: 45px;
+    font-weight: bold;
+    color: #1500ff;
+    font-family: "Fredoka", sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.load-txt span {
+    display: inline-block;
+    text-transform: uppercase;
+    animation: rotate 1s infinite linear;
+}
+
+.load-txt span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.load-txt span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.load-txt span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.lload-txt span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.load-txt span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.load-txt span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.load-txt span:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+.loading-area span:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+.loading-area span:nth-child(10) {
+    animation-delay: 0.9s;
+}
+
+@keyframes rotate {
+    10% {
+        transform: scale(1.1);
+    }
+
+} */
+
 /* トップページ */
 .toppage {
     background-color: #4de4ea;
     border-radius: 50px;
-    height: 90vh;
+    height: 95vh;
     margin: 30px;
     position: relative;
 }
@@ -44,7 +124,8 @@ h1 img {
     position: fixed;
     top: 15px;
     right: 15px;
-    z-index: 1000;
+    z-index: 100;
+    cursor: pointer;
 }
 
 .hamburger img {
@@ -54,7 +135,7 @@ h1 img {
 .hamburger-wrapper ul {
     position: relative;
     width: 90px;
-    height: 90px;
+    height: auto;
 }
 
 .hamburger li {
@@ -154,10 +235,11 @@ h2 {
     font-weight: 600;
     margin: 20px;
 }
+
 /* セクション内余白 */
 .section_inner {
     width: 100%;
-    padding: 0 24px;
+    padding: 0 50px;
 }
 
 /* アバウト 自己紹介 */
@@ -191,7 +273,7 @@ h2 {
 /* もっと見るボタン */
 
 .hd-btn {
-    margin: 10px auto 0;
+    margin: 30px auto 0;
     width: 200px;
     height: auto;
     z-index: 100;
@@ -200,7 +282,6 @@ h2 {
 .hd-btn img {
     width: 100%;
 }
-
 
 
 /* スキル */
@@ -212,14 +293,17 @@ h2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    ;
 }
 
 
 /* 各スキル中央寄せ＆少しコンパクトに */
 .skill-item {
-    max-width: 260px;
+    max-width: 300px;
     margin: 0 auto;
     text-align: center;
+    /* background-color: #ffd0cf;
+    border-radius: 30px; */
 }
 
 /* ピザ */
@@ -237,6 +321,7 @@ h2 {
     height: 100%;
     object-fit: contain;
     transition: 0.4s ease;
+    z-index: 3;
 }
 
 .pizza-slice.hide {
@@ -251,24 +336,31 @@ h2 {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    z-index: -1;
+    z-index: 2;
 }
 
 /* テキスト */
 .skill-name {
     margin-top: 12px;
+    font-size: 25px;
     font-weight: 700;
+    color: #e43632;
 }
 
 .skill-text {
     max-width: 300px;
-    margin: 8px auto 0;
+    margin: 10px 10px;
     font-size: 14px;
     line-height: 1.5;
     color: #333;
 }
 
 /* work*/
+/* .section_work {
+    max-width: 1100px;
+    margin: 0 auto;
+} */
+
 .slide-items__wrap {
     width: 100%;
     height: 100%;
@@ -312,23 +404,30 @@ h2 {
     height: 200px;
 }
 
-.plaid>p{
+.plaid>p {
     font-size: 20px;
     margin: 0 auto;
     text-align: center;
     color: #333;
     padding-top: 30px;
 }
+
 .address-area {
     max-width: 500px;
     margin: 20px auto 0;
 }
+
 .address-area address {
     text-align: center;
     font-family: "Fredoka", sans-serif;
     color: #ffffff;
     font-size: 30px;
     font-weight: 600;
+}
+
+.X {
+    background-image: url(../images/img/X-icon.png);
+
 }
 
 
@@ -340,17 +439,71 @@ footer p {
 }
 
 /* レスポンシブ対応 */
-@media (min-width: 768px) {
+
+@media (max-width: 767px) {
+    h1 img {
+        position: absolute;
+        max-width: 200px;
+        inset: 0;
+        margin: auto;
+    }
+
+    .hamburger-wrapper ul {
+        width: 70px;
+        height: auto;
+    }
+
+    .about-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-wrapper img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hd-btn {
+        margin: 20px auto 0;
+        width: 150px;
+        height: auto;
+        z-index: 100;
+    }
+
+    .hd-btn img {
+        width: 100%;
+    }
+
+
     .section_skill {
         min-height: 100vh;
         display: flex;
         align-items: center;
     }
-}
 
-/* スキルセクション　スマホだとピザ2列 */
-@media (max-width: 767px) {
     .skill-list {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .slide-items__item img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+        object-position: center;
+    }
+
 }
+
+/* @media (max-width: 384px) {
+    .slide-items__item {
+        width: 50px;
+        margin: 0 20px;
+    }
+
+    .slide-items__item img {
+        width: 100%;
+        height: 150px;
+        object-fit: contain;
+        object-position: center;
+    }
+} */
