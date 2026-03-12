@@ -496,9 +496,10 @@ footer p {
 /* about.html */
 
 /* works.html */
+/* ロゴ */
 .top-logo {
 position: fixed;
-top: 10px;
+top: 5px;
 left: 20px;
 width: 60px;
 height: auto;
@@ -507,12 +508,14 @@ z-index: 100;
 .top-logo img {
     width: 100%;
 }
+/* 制作物一覧 */
 .works-container {
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    padding: 0 50px;
 }
 
 /* 制作物ごとに枠をつける。色は仮 */
@@ -532,4 +535,25 @@ z-index: 100;
     text-align: center;
     padding: 10px;
 }
-
+.work-area button {
+    display: block;
+text-align: center;
+background-color: #e43632;
+    padding: 7px 25px;
+    max-width: 200px; 
+    margin: 0 auto;
+    border-radius: 30px;
+    /* ホバー時の動き */
+    transition: transform .25s ease;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+/* ホバーとクリック */
+.work-area button:hover {
+    transform: scale(1.05);
+}
+.work-area button:active {
+    transform: scale(0.95);
+}
