@@ -8,7 +8,7 @@
 	<!-- タイトルに表示される写真-->
 	<link rel="icon" href="./images/img/hero02.png">
 	<!-- リセットCSS -->
-	<link rel="stylesheet" href="../CSS/reset.css">
+	<link rel="stylesheet" href="./CSS/reset.css">
 	<!-- グーグルフォント -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,16 +29,17 @@
 <body class="index-html">
 
 	<header>
+		<h1 id="home">
 		<div class="toppage">
-			<h1 id="home">
+			
 				<!-- まだ色々足します！！！！ -->
 				<!-- ヒーロービューの写真　メイン -->
 				<img src="/images/img/hero01.png" alt="パンケーキを食べる猫のイラスト" class="hero-main">
 				<!-- ヒーロービューの写真　クリック -->
 				<img src="./images/img/hero02.png" alt="パンケーキを食べる猫のイラスト" class="hero-sub">
+				</div>
 			</h1>
-		</div>
-		<!-- ハンバーガーメニューをクリックしても各セクションに飛ばないので後で直します！おそらく各画像の本来の大きさが邪魔して反応しないようになってると思うので元画像を修正するか、ハンバーガーメニューをクリックするとメニューが上からスライドインするようにしようと思っています -->
+		
 		<div class="hamburger-wrapper">
 			<nav>
 				<ul class="hamburger">
@@ -47,33 +48,33 @@
 					</li>
 					<li class="hamburger-home">
 						<a href="#home">
-							<img src="./images/hamburger manu/hamburger-02.png" alt="ホーム">
+							<img src="./images/hamburger manu/hamburger-02.png" alt="home">
 							<!-- <span>HOME</span> -->
 						</a>
 					</li>
 					<li class="hamburger-about">
 						<a href="#about">
-							<img src="./images/hamburger manu/hamburger-03.png" alt="アバウト">
+							<img src="./images/hamburger manu/hamburger-03.png" alt="about">
 							<!-- <span>ABOUT</span> -->
 						</a>
 					</li>
 					<li class="hamburger-skill">
 						<a href="#skill">
-							<img src="./images/hamburger manu/hamburger-04.png" alt="スキル">
+							<img src="./images/hamburger manu/hamburger-04.png" alt="skill">
 							<!-- <span>SKILL</span> -->
 						</a>
 					</li>
 
 					<li class="hamburger-work">
 						<a href="#work">
-							<img src="./images/hamburger manu/hamburger-05.png" alt="ワーク">
+							<img src="./images/hamburger manu/hamburger-05.png" alt="work">
 							<!-- <span>WORK</span> -->
 						</a>
 					</li>
 
 					<li class="hamburger-contact">
 						<a href="#contact">
-							<img src="./images/hamburger manu/hamburger-06.png" alt="コンタクト">
+							<img src="./images/hamburger manu/hamburger-06.png" alt="contact">
 							<!-- <span>CONTACT</span> -->
 						</a>
 					</li>
@@ -105,11 +106,9 @@
 						</p>
 					</div>
 				</div>
-				<!-- <button class="hd-btn">
-					<a href="about.html">
+				<!-- <a href="works.html" class="hd-btn">
 						<img src="./images/img/hd-btn.PNG" alt="もっと見る">
-					</a>
-				</button> -->
+					</a> -->
 			</div>
 		</section>
 
@@ -254,11 +253,11 @@
 						</li>
 					</ul>
 				</div>
-				<button class="hd-btn">
-					<a href="works.html">
+			
+					<a href="works.html" class="hd-btn">
 						<img src="./images/img/hd-btn.PNG" alt="もっと見る">
 					</a>
-				</button>
+			
 			</div>
 		</section>
 
@@ -267,23 +266,20 @@
 
 			<div class="plaid">
 
-				<p>下記メールアドレスor各種SNSにてご連絡ください。</p>
+				<p>下記メールアドレスにてご連絡ください。</p>
 				<div class="address-area">
 					<a href="mailto:30808sugimotomoe@gmail.com">
-						<button
-							class="relative z-0 h-12 rounded-full bg-blue-500 px-6 text-neutral-50 after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-full after:rounded-full after:bg-blue-500 hover:after:scale-x-125 hover:after:scale-y-150 hover:after:opacity-0 hover:after:transition hover:after:duration-500">
 							<address>30808sugimotomoe@gmail.com</address>
-						</button>
 					</a>
 
-					<div class="SNS-icon">
+					<!-- <div class="SNS-icon">
 						<a href="#" class="X">
 							<img src="" alt="xのアカウント">
 						</a>
 						<a href="#" class="Instagram">
 							<img src="" alt="Instagramのアカウント">
 						</a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</section>

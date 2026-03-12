@@ -483,6 +483,17 @@ footer p {
 /* about.html */
 
 /* works.html */
+.top-logo {
+position: fixed;
+top: 10px;
+left: 20px;
+width: 60px;
+height: auto;
+z-index: 100;
+}
+.top-logo img {
+    width: 100%;
+}
 .works-container {
     max-width: 1100px;
     margin: 0 auto;
