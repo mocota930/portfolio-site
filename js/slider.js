@@ -9,16 +9,16 @@ $('.slide-items').slick({
             breakpoint: 768,
             settings: {
                 arrows: false,
-                centerMode: true,
+                centerMode: false,
                 centerPadding: '40px',
                 slidesToShow: 3
             }
         },
         {
-            breakpoint: 480,
+            breakpoint: 490,
             settings: {
-                arrows: false,
-                centerMode: true,
+                arrows: true,
+                centerMode: false,
                 centerPadding: '40px',
                 slidesToShow: 1
             }
