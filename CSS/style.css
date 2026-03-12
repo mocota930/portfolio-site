@@ -339,8 +339,10 @@ h2 {
     font-size: clamp(0.938rem, 0.824rem + 0.57vw, 1.25rem);
     margin: 0 auto;
     text-align: center;
-    color: #333;
+    color: #222;
+    font-weight: bold;
     padding-top: 30px;
+    text-shadow:0 2px 6px rgba(255,255,255,0.9);
 }
 
 .address-area {
@@ -352,11 +354,13 @@ h2 {
 
 .address-area address {
     justify-content: center;
-background-color: #1500ff;
-    padding: 7px 20px;
+background-color: #e43632;
+    padding: 7px 25px;
     max-width: 500px; 
     margin: 0 auto;
     border-radius: 30px;
+    /* ホバー時の動き */
+    transition: transform .25s ease;
 }
 .address-area a{
     font-family: "Fredoka", sans-serif;
@@ -365,7 +369,13 @@ background-color: #1500ff;
     font-weight: 600;
     letter-spacing: 0.05em;
 }
-
+/* ホバーとクリック */
+.address-area address:hover {
+    transform: scale(1.05);
+}
+.address-area address:active {
+    transform: scale(0.95);
+}
 
 /* フッター */
 footer p {
@@ -428,6 +438,8 @@ footer p {
         width: 200px;
         height: 200px;
     }
+    .about-content p:nth-of-type(2){
+  text-align: left;}
 
     .hd-btn {
         margin: 20px auto 0;
