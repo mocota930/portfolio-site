@@ -15,6 +15,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 	<!-- Tailwind CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 	<!-- jQuery スリック -->
 	<!-- slick -->
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -25,4 +26,118 @@
 	<link rel="stylesheet" href="./CSS/style.css">
 </head>
 
-<body>
+<body class="works-html">
+	<!-- <header>
+		<a href="index.html">
+			<img src="" alt="ロゴpng">
+		</a>
+	</header> -->
+
+	<h2>Work</h2>
+	<section class="works">
+		<!-- 制作物の掲載箇所 -->
+		<div class="works-container">
+
+			<!-- 作品1 -->
+			<div class="work-area">
+				<img src="./images/work/flyer01.jpg" alt="映画のフライヤー 表">
+				<h3>映画のフライヤー（表）</h3>
+				<button class="open-modal" data-modal="modal1">
+					<p>詳しく見る</p>
+				</button>
+			</div>
+			<!-- 作品2 -->
+			<div class="work-area">
+				<img src="./images/work/flyer02.jpg" alt="映画のフライヤー 裏">
+				<h3>映画のフライヤー（裏）</h3>
+				<button class="open-modal" data-modal="modal2">
+					<p>詳しく見る</p>
+				</button>
+			</div>
+
+			<!-- 作品3 （画像は仮）-->
+			<div class="work-area">
+				<img src="./images/work/flyer02.jpg" alt="映画のバナー">
+				<h3>映画のバナー</h3>
+				<button class="open-modal" data-modal="modal3">
+					<p>詳しく見る</p>
+				</button>
+			</div>
+
+			<!-- 作品4 -->
+			<div class="work-area">
+				<img src="./images/work/shopCard.png" alt="ショップカード">
+				<h3>パン屋のショップカード</h3>
+				<button class="open-modal" data-modal="modal4">
+					<p>詳しく見る</p>
+				</button>
+			</div>
+
+			<!-- 作品5 -->
+			<div class="work-area">
+				<img src="./images/work/thumbnail.webp" alt="サムネイル">
+				<h3>グルメ紹介動画の<br>サムネイル</h3>
+				<button class="open-modal" data-modal="modal5">
+					<p>詳しく見る</p>
+				</button>
+			</div>
+			<!-- 作品6 -->
+			<div class="work-area">
+				<img src="./images/work/burger.png" alt="ハンバーガーのイラスト">
+				<h3>ハンバーガーのイラスト</h3>
+				<button class="open-modal" data-modal="modal6">
+					<p>詳しく見る</p>
+				</button>
+			</div>
+
+			<!-- 作品7 -->
+			<div class="work-area">
+				<img src="./images/work/pizza.png" alt="ピザのイラスト">
+				<h3>ピザのイラスト</h3>
+				<button class="open-modal" data-modal="modal7">
+					<p>詳しく見る</p>
+				</button>
+			</div>
+
+		</div>
+		<!-- モーダル -->
+
+	</section>
+
+	<section id="contact" class="section_contact">
+		<div>
+			<h2>Contact</h2>
+
+			<div class="plaid">
+				<!-- 読みにくいのであとでなんとかします！！！！ -->
+				<p>下記メールアドレスor各種SNSにてご連絡ください。</p>
+				<div class="address-area">
+					<a href="mailto:30808sugimotomoe@gmail.com">
+						<button
+							class="relative z-0 h-12 rounded-full bg-blue-500 px-6 text-neutral-50 after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-full after:rounded-full after:bg-blue-500 hover:after:scale-x-125 hover:after:scale-y-150 hover:after:opacity-0 hover:after:transition hover:after:duration-500">
+							<address>30808sugimotomoe@gmail.com</address>
+						</button>
+					</a>
+
+					<div class="SNS-icon">
+						<a href="#" class="X">
+							<img src="" alt="xのアカウント">
+						</a>
+						<a href="#" class="Instagram">
+							<img src="" alt="Instagramのアカウント">
+						</a>
+					</div>
+					</a>
+				</div>
+			</div>
+	</section>
+	</main>
+	<footer>
+		<p><small>&copy; 2026 sugimoto moe</small></p>
+	</footer>
+	<!-- js -->
+	<script src="./js/slider.js"></script>
+	<script src="./js/load.js"></script>
+	<script src="./js/hamburger.js"></script>
+	<script src="./js/pizza.js"></script>
+</body>
