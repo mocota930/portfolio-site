@@ -16,34 +16,41 @@ html {
     background-color: #4de4ea;
     border-radius: 50px;
     height: 95vh;
-    margin: 30px;
+    margin: 30px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
-/* ヒーロビューのイラストの大きさ */
-h1 img {
-    position: absolute;
-    max-width: 300px;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
-    inset: 0;
-    margin: auto;
+/* ヒーロビューのイラストの大きさと位置 */
+.heroview {
+    max-width: 400px;
+    margin: 0 auto;
 }
 
-/* ヒーロビューの画像。画像クリックで切り替わり */
-.hero-main.is-visible {
-    opacity: 0;
+.heroview img {
+    width: 100%;
 }
 
 .hero-sub {
     opacity: 0;
+    display: none;
 }
 
-.hero-sub.is-visible {
-    opacity: 1;
-    /* transition: opacity 1s ease-in-out; */
+
+.hero-title {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 700;
+    color: #facd22;
+    letter-spacing: 0.05em;
+    font-size: clamp(2rem, -0.682rem + 13.41vw, 9.375rem);
 }
+
+
+
 
 /* ハンバーガーメニュー */
 .hamburger-wrapper {
@@ -104,23 +111,6 @@ h1 img {
     margin-top: 68px;
 }
 
-/* .hamburger a {
-    position: relative;
-    display: block;
-}
-
-はんばーがーめにゅーの文字の位置など
-.hamburger span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 12px;
-    font-weight: bold;
-    color: #ffffff;
-    pointer-events: none;
-    opacity: 0;
-} */
 
 /* クリックした時に、ハンバーガーが展開し、下方向に具材が移動する。 */
 .hamburger-home.is-open {
@@ -167,9 +157,14 @@ h2 {
     margin: 20px;
 }
 
+.section-contact h2 {
+    margin-bottom: 0px;
+}
+
 /* セクション内余白 */
 .section-inner {
-    width: 100%;
+    max-width: 1100px;
+    margin: auto;
     padding: 0 50px;
 }
 
@@ -214,7 +209,6 @@ h2 {
 .hd-btn img {
     width: 100%;
 }
-
 
 /* スキル */
 
@@ -272,7 +266,7 @@ h2 {
 /* テキスト */
 .skill-name {
     margin-top: 12px;
-    font-size: 25px;
+    font-size: clamp(1.188rem, 1.051rem + 0.68vw, 1.563rem);
     font-weight: 700;
     color: #e43632;
 }
@@ -298,13 +292,19 @@ h2 {
 }
 
 .slick-prev {
-    left: -15px;
-    z-index: 100;
+    left: 0px;
+    z-index: 50;
 }
 
 .slick-next {
-    right: -5px;
-    z-index: 100;
+    right: 0px;
+    z-index: 50;
+}
+
+.slick-prev,
+.slick-next {
+    width: 30px;
+    height: 30px;
 }
 
 .slide-items__item {
@@ -322,7 +322,7 @@ h2 {
 .slick-prev:before,
 .slick-next:before {
     color: #e43632;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 /* コンタクト */
@@ -332,7 +332,7 @@ h2 {
     background-position: 0 0, 30px 30px;
     background-size: 60px 60px;
     height: 200px;
-    
+
 }
 
 .plaid p {
@@ -342,7 +342,7 @@ h2 {
     color: #222;
     font-weight: bold;
     padding-top: 30px;
-    text-shadow:0 2px 6px rgba(255,255,255,0.9);
+    text-shadow: 0 2px 6px rgba(255, 255, 255, 0.9);
 }
 
 .address-area {
@@ -354,25 +354,28 @@ h2 {
 
 .address-area address {
     justify-content: center;
-background-color: #e43632;
+    background-color: #e43632;
     padding: 7px 25px;
-    max-width: 500px; 
+    max-width: 500px;
     margin: 0 auto;
     border-radius: 30px;
     /* ホバー時の動き */
     transition: transform .25s ease;
 }
-.address-area a{
+
+.address-area a {
     font-family: "Fredoka", sans-serif;
     color: #ffffff;
     font-size: clamp(1.25rem, 1.023rem + 1.14vw, 1.875rem);
     font-weight: 600;
     letter-spacing: 0.05em;
 }
+
 /* ホバーとクリック */
 .address-area address:hover {
     transform: scale(1.05);
 }
+
 .address-area address:active {
     transform: scale(0.95);
 }
@@ -384,15 +387,108 @@ footer p {
     color: #333;
 }
 
+/* about.html */
+
+/* works.html */
+/* ロゴ */
+.top-logo {
+    position: fixed;
+    top: 40px;
+    left: 20px;
+    width: 50px;
+    height: auto;
+    z-index: 100;
+}
+
+.top-logo img {
+    width: 100%;
+}
+
+/* 制作物一覧 */
+.works-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 50px;
+}
+
+/* 制作物ごとに枠をつける。色は仮 */
+.work-container {
+    /* border: #1500ff solid 5px; */
+    background-color: #4de4ea;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 300px;
+}
+
+.work-container img {
+    max-width: 100%;
+    height: 350px;
+    object-fit: contain;
+}
+
+.work-container video {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    height: 350px;
+}
+
+.work-container h3 {
+    text-align: center;
+    padding: 10px;
+    min-height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-container button {
+    display: block;
+    text-align: center;
+    background-color: #e43632;
+    padding: 7px 25px;
+    max-width: 200px;
+    margin: 0 auto;
+    border-radius: 30px;
+    /* ホバー時の動き */
+    transition: transform .25s ease;
+    color: #ffffff;
+    font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+
+}
+
+/* ホバーとクリック */
+.work-container button:hover {
+    transform: scale(1.05);
+}
+
+.work-container button:active {
+    transform: scale(0.95);
+}
+
 /* レスポンシブ対応 */
 
 @media (max-width: 767px) {
-    h1 img {
-        position: absolute;
-        max-width: 200px;
-        inset: 0;
-        margin: auto;
+    .toppage {
+        margin: 30px;
     }
+
+    .heroview {
+        max-width: 250px;
+    }
+
+    /* .signboard {
+        max-width: 300px;
+        position: absolute;
+        top: 5%;
+        left: 10%;
+
+    } */
 
     .hamburger-wrapper ul {
         width: 60px;
@@ -438,8 +534,10 @@ footer p {
         width: 200px;
         height: 200px;
     }
-    .about-content p:nth-of-type(2){
-  text-align: left;}
+
+    .about-content p:nth-of-type(2) {
+        text-align: left;
+    }
 
     .hd-btn {
         margin: 20px auto 0;
@@ -447,11 +545,6 @@ footer p {
         height: auto;
         z-index: 100;
     }
-
-    .hd-btn img {
-        width: 100%;
-    }
-
 
     .section-skill {
         min-height: 100vh;
@@ -470,15 +563,43 @@ footer p {
         object-position: center;
     }
 
+    .slick-prev {
+        left: -15px;
+        z-index: 50;
+    }
+
+    .slick-next {
+        right: -15px;
+        z-index: 50;
+    }
+
     .slick-prev:before,
     .slick-next:before {
         color: #e43632;
         font-size: 30px;
     }
 
-.address-area address {
-    margin: 0 30px;
-}}
+    .address-area address {
+        margin: 0 30px;
+    }
+
+    /* works　レスポンシブ */
+    .top-logo {
+        position: fixed;
+        top: 30px;
+        left: 15px;
+        width: 40px;
+        height: auto;
+        z-index: 100;
+    }
+
+    .works-wrapper {
+        grid-template-columns: none;
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
+}
 
 /* @media (max-width: 384px) {
     .slide-items__item {
@@ -493,67 +614,3 @@ footer p {
         object-position: center;
     }
 } */
-/* about.html */
-
-/* works.html */
-/* ロゴ */
-.top-logo {
-position: fixed;
-top: 5px;
-left: 20px;
-width: 60px;
-height: auto;
-z-index: 100;
-}
-.top-logo img {
-    width: 100%;
-}
-/* 制作物一覧 */
-.works-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding: 0 50px;
-}
-
-/* 制作物ごとに枠をつける。色は仮 */
-.work-area {
-    border: #1500ff solid 5px;
-    border-radius: 20px;
-    padding: 30px;
-    max-width: 300px;
-    height: 480px;
-
-}
-.work-area img {
-    width: 100%;
-}
-
-.work-area h3 {
-    text-align: center;
-    padding: 10px;
-}
-.work-area button {
-    display: block;
-text-align: center;
-background-color: #e43632;
-    padding: 7px 25px;
-    max-width: 200px; 
-    margin: 0 auto;
-    border-radius: 30px;
-    /* ホバー時の動き */
-    transition: transform .25s ease;
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-}
-/* ホバーとクリック */
-.work-area button:hover {
-    transform: scale(1.05);
-}
-.work-area button:active {
-    transform: scale(0.95);
-}
