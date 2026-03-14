@@ -274,9 +274,14 @@ h2 {
 .skill-text {
     max-width: 300px;
     margin: 10px 10px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     color: #333;
+}
+.skill-text span {
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
 }
 
 /* work*/
@@ -405,6 +410,13 @@ footer p {
 }
 
 /* 制作物一覧 */
+.works-html p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
 .works-wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -555,6 +567,15 @@ footer p {
     .skill-list {
         grid-template-columns: repeat(2, 1fr);
     }
+    .skill-text {
+    text-align: left;
+    }
+
+    .skill-text span {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
 
     .slide-items__item img {
         width: 100%;
