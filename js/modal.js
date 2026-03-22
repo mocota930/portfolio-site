@@ -59,3 +59,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+// escキーで閉じる
+// keydownは、キーボードが押されたときのイベント。eに押されたキーの情報を入れる。
+document.addEventListener("keydown", (e) => {
+    // もし押されたキーがEscapeならば
+    if (e.key === "Escape") {
+        // 全てのmodalのactiveクラスを取得
+        const modals = document.querySelectorAll(".modal.active");
+        // activeクラスを外す
+        modals.forEach(modal => {
+            modal.classList.remove("active");
+        });
+    }
+});

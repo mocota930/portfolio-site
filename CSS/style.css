@@ -27,8 +27,9 @@ html {
 
 /* ヒーロビューのイラストの大きさと位置 */
 .heroview {
-    max-width: 400px;
+    max-width: 350px;
     margin: 0 auto;
+    z-index: 10;
 }
 
 .heroview img {
@@ -48,8 +49,11 @@ html {
     letter-spacing: 0.05em;
     font-size: clamp(2rem, -0.682rem + 13.41vw, 9.375rem);
 }
-
-
+.title-01 {
+    margin-bottom: -50px;
+}
+.title-02 {
+    margin-top: -50px;}
 
 
 /* ハンバーガーメニュー */
@@ -302,7 +306,7 @@ h2 {
 }
 
 .slick-next {
-    right: 0px;
+    right: 10px;
     z-index: 50;
 }
 
@@ -572,13 +576,11 @@ max-width: 100%;
         max-width: 250px;
     }
 
-    /* .signboard {
-        max-width: 300px;
-        position: absolute;
-        top: 5%;
-        left: 10%;
-
-    } */
+.title-01 {
+    margin-bottom: 10px;
+}
+.title-02 {
+    margin-top: 10px;}
 
     .hamburger-wrapper ul {
         width: 60px;
