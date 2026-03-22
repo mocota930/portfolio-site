@@ -47,7 +47,7 @@
 				<div class="work-container">
 					<img src="./images/work/flyer01.jpg" alt="映画のフライヤー 表">
 					<h3>映画のフライヤー（表）</h3>
-					<button class="relative overflow-hidden rounded-full bg-red-500 px-5 py-2.5 text-white font-bold duration-300 [transition-timing-function:cubic-bezier(0.175,0.885,0.32,1.275)] active:translate-y-1 active:scale-x-110 active:scale-y-90">
+					<button class="relative overflow-hidden rounded-full bg-red-500 px-5 py-2.5 text-white font-bold duration-300 [transition-timing-function:cubic-bezier(0.175,0.885,0.32,1.275)] active:translate-y-1 active:scale-x-110 active:scale-y-90 open-modal" data-modal="modal1">
 						詳しく見る
 					</button>
 				</div>
@@ -55,7 +55,7 @@
 				<div class="work-container">
 					<img src="./images/work/flyer02.jpg" alt="映画のフライヤー 裏">
 					<h3>映画のフライヤー（裏）</h3>
-					<button class="relative overflow-hidden rounded-full bg-red-500 px-5 py-2.5 text-white font-bold duration-300 [transition-timing-function:cubic-bezier(0.175,0.885,0.32,1.275)] active:translate-y-1 active:scale-x-110 active:scale-y-90">
+					<button class="relative overflow-hidden rounded-full bg-red-500 px-5 py-2.5 text-white font-bold duration-300 [transition-timing-function:cubic-bezier(0.175,0.885,0.32,1.275)] active:translate-y-1 active:scale-x-110 active:scale-y-90 open-modal" data-modal="modal2">
 						詳しく見る
 					</button>
 				</div>
@@ -75,7 +75,7 @@
 						<source src="./images/work/PRmovie.mp4" type="video/mp4">
 					</video>
 					<h3>職業訓練校の<br>生徒募集動画</h3>
-					<button class="relative overflow-hidden rounded-full bg-red-500 px-5 py-2.5 text-white font-bold duration-300 [transition-timing-function:cubic-bezier(0.175,0.885,0.32,1.275)] active:translate-y-1 active:scale-x-110 active:scale-y-90">
+					<button class="relative overflow-hidden rounded-full bg-red-500 px-5 py-2.5 text-white font-bold duration-300 [transition-timing-function:cubic-bezier(0.175,0.885,0.32,1.275)] active:translate-y-1 active:scale-x-110 active:scale-y-90 open-modal" data-modal="modal3">
 						詳しく見る
 					</button>
 				</div>
@@ -84,7 +84,7 @@
 				<div class="work-container">
 					<img src="./images/work/shopCard.png" alt="ショップカード">
 					<h3>パン屋のショップカード</h3>
-					<button class="relative overflow-hidden rounded-full bg-red-500 px-5 py-2.5 text-white font-bold duration-300 [transition-timing-function:cubic-bezier(0.175,0.885,0.32,1.275)] active:translate-y-1 active:scale-x-110 active:scale-y-90">
+					<button class="relative overflow-hidden rounded-full bg-red-500 px-5 py-2.5 text-white font-bold duration-300 [transition-timing-function:cubic-bezier(0.175,0.885,0.32,1.275)] active:translate-y-1 active:scale-x-110 active:scale-y-90 open-modal" data-modal="modal4">
 						詳しく見る</button>
 				</div>
 
@@ -92,7 +92,7 @@
 				<div class="work-container">
 					<img src="./images/work/thumbnail.webp" alt="サムネイル">
 					<h3>グルメ紹介動画の<br>サムネイル</h3>
-					<button class="relative overflow-hidden rounded-full bg-red-500 px-5 py-2.5 text-white font-bold duration-300 [transition-timing-function:cubic-bezier(0.175,0.885,0.32,1.275)] active:translate-y-1 active:scale-x-110 active:scale-y-90">
+					<button class="relative overflow-hidden rounded-full bg-red-500 px-5 py-2.5 text-white font-bold duration-300 [transition-timing-function:cubic-bezier(0.175,0.885,0.32,1.275)] active:translate-y-1 active:scale-x-110 active:scale-y-90 open-modal" data-modal="modal5">
 						詳しく見る
 					</button>
 				</div>
@@ -101,14 +101,32 @@
 				<div class="work-container">
 					<img src="./images/work/pizza.png" alt="ピザのイラスト">
 					<h3>ピザのイラスト</h3>
-					<button class="relative overflow-hidden rounded-full bg-red-500 px-5 py-2.5 text-white font-bold duration-300 [transition-timing-function:cubic-bezier(0.175,0.885,0.32,1.275)] active:translate-y-1 active:scale-x-110 active:scale-y-90">
+					<button class="relative overflow-hidden rounded-full bg-red-500 px-5 py-2.5 text-white font-bold duration-300 [transition-timing-function:cubic-bezier(0.175,0.885,0.32,1.275)] active:translate-y-1 active:scale-x-110 active:scale-y-90 open-modal" data-modal="modal6">
 						詳しく見る
 					</button>
 				</div>
 
 			</div>
 			<!-- モーダル -->
-
+<div id="modal1" class="modal">
+	<div class="modal-content">
+		<img src="./images/work/flyer01.jpg" alt="映画のフライヤー 表">
+		<h3>映画のフライヤー（表）</h3>
+		<div class="modal-text">
+    <!-- <p class="bg-yellow-300 px-5 py-2.5 font-bold rounded-full  ">授業課題</p> -->
+    <p>授業課題</p>
+	<div class="modal-info">
+    <p><span>制作時間</span><br>
+		18時間</p>
+    <p><span>使用ツール</span><br>
+		Illustrator / Photoshop</p>
+	</div>
+	<p><span>工夫した点など</span><br>
+	テキストテキスト</p>
+    </div>
+	<button class="close">閉じる</button>
+	</div>
+</div>
 		</section>
 
 

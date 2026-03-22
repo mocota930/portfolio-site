@@ -344,7 +344,7 @@ h2 {
     font-size: clamp(0.938rem, 0.824rem + 0.57vw, 1.25rem);
     margin: 0 auto;
     text-align: center;
-    color: #222;
+    color: #333;
     font-weight: bold;
     padding-top: 30px;
     text-shadow: 0 2px 6px rgba(255, 255, 255, 0.9);
@@ -458,6 +458,7 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
 }
 
 /* .work-container button {
@@ -484,6 +485,56 @@ footer p {
 .work-container button:active {
     transform: scale(0.95);
 }
+/* モーダルウィンドウ */
+.modal {
+    /* display: none; */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+    background-color: #4de4ea;
+    margin: 10px auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    text-align: center;
+}
+.modal-content img {
+    max-width: 100%;
+    height: 500px;
+    margin: 0 auto;
+}
+.modal-content video {
+    max-width: 100%;
+    height: 500px;
+    margin: 0 auto;
+}
+.modal-content h3 {
+    margin: 10px 0;
+    font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
+}
+.modal-text{
+    background-color: #fbfbfb;
+    padding: 10px 0;
+    border-radius: 20px;
+}
+.modal-text span{color: #1500ff;
+    font-weight: bold;
+    display: block;
+}
+.modal-text p {
+    font-size: clamp(1rem, 0.977rem + 0.11vw, 1.063rem);
+    line-height: 1.6;
+    color: #333;
+}
+
 
 /* レスポンシブ対応 */
 
