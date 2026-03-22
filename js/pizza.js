@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-
+// .skill-itemのクラス名をite
   const items = document.querySelectorAll(".skill-item");
 
   const observer = new IntersectionObserver((entries) => {
