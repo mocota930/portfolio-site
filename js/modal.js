@@ -1,4 +1,4 @@
-
+// html全部読み込んでから処理する
 document.addEventListener("DOMContentLoaded", () => {
 
 
@@ -12,13 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeButtons = document.querySelectorAll(".close");
 
     // 開く処理。それぞれ処理する
-        // forEachとは？　配列の要素を一つずつ処理するためのメソッド
+    // forEachとは？　配列の要素を一つずつ処理するためのメソッド
 
     openButtons.forEach(button => {
 
         // 各ボタンにクリックイベントをつける
         button.addEventListener("click", () => {
-// modalIDという名前の定数に、modal1とかを入れる。
+            // modalIDという名前の定数に、modal1とかを入れる。
             const modalId = button.dataset.modal;
 
             // 取得したIDのモーダルを探す
@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-// 閉じる処理。それぞれ処理する
+    // 閉じる処理。それぞれ処理する
     closeButtons.forEach(button => {
-// 各ボタンにクリックイベントをつける
+        // 各ボタンにクリックイベントをつける
         button.addEventListener("click", () => {
 
             // closestでbuttonから一番近い親要素のmodalクラスを探す
@@ -45,9 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-// 閉じる以外にも背景クリックで閉じるようにする
+    // 閉じる以外にも背景クリックで閉じるようにする
     modals.forEach(modal => {
-// eにクリック情報を入れる
+        // eにクリック情報を入れる
         modal.addEventListener("click", (e) => {
 
             // e.targetはクリックされた場所？？？？"

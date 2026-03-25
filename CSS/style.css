@@ -378,7 +378,7 @@ h2 {
 
 .address-area a {
     font-family: "Fredoka", sans-serif;
-    color: #ffffff;
+    color: #fbfbfb;
     font-size: clamp(1.25rem, 1.023rem + 1.14vw, 1.875rem);
     font-weight: 600;
     letter-spacing: 0.05em;
@@ -431,17 +431,22 @@ footer p {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding: 0 100px;
+    gap: 50px;
+    padding: 0 20px;
+}
+
+.works-wrapper button {
+    font-family: "Fredoka", sans-serif;
+    letter-spacing: 2px;
+    font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
 }
 
 /* 制作物ごとに枠をつける。色は仮 */
 .work-container {
     /* border: #1500ff solid 5px; */
     background-color: #4de4ea;
-    border-radius: 20px;
+    border-radius: 25px;
     padding: 30px;
-    max-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -457,7 +462,7 @@ footer p {
     max-width: 100%;
     margin: 0 auto;
     display: block;
-    height: 340px;
+    height: 350px;
 }
 
 .work-container h3 {
@@ -480,7 +485,7 @@ footer p {
     max-width: 200px;
     margin: 0 auto;
     border-radius: 30px;
-     
+
     transition: transform .25s ease;
     color: #ffffff;
     font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
@@ -545,9 +550,10 @@ footer p {
     font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
 }
 
+/* テキストエリアに白背景をつける */
 .modal-text {
     background-color: #fbfbfb;
-    padding: 0 15px;
+    padding: 15px;
     border-radius: 20px;
 
 }
@@ -715,12 +721,23 @@ footer p {
         z-index: 100;
     }
 
+    /* モーダル　グリッド */
     .works-wrapper {
         grid-template-columns: none;
         margin: 0 auto;
-        max-width: 400px;
+        max-width: 350px;
+        padding: 0;
     }
 
+    .work-container {
+        max-width: 100%;
+    }
+
+    /* モーダル　個々 */
+    .modal-box {
+        max-width: 350px;
+        margin: 30 auto;
+    }
 }
 
 /* @media (max-width: 384px) {
