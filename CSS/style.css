@@ -385,13 +385,13 @@ h2 {
 }
 
 /* ホバーとクリック */
-.address-area address:hover {
+/* .address-area address:hover {
     transform: scale(1.05);
 }
 
 .address-area address:active {
     transform: scale(0.95);
-}
+} */
 
 /* フッター */
 footer p {
@@ -467,31 +467,15 @@ footer p {
 
 .work-container h3 {
     text-align: center;
-    padding: 10px;
     min-height: 72px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
     font-family: "Kiwi Maru", serif;
-
+    margin: 5px 0;
 }
 
-/* .work-container button {
-    display: block;
-    text-align: center;
-    background-color: #e43632;
-    padding: 7px 25px;
-    max-width: 200px;
-    margin: 0 auto;
-    border-radius: 30px;
-
-    transition: transform .25s ease;
-    color: #ffffff;
-    font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
-    font-weight: 600;
-    letter-spacing: 0.05em;
-} */
 
 /* ホバーとクリック */
 .work-container button:hover {
@@ -546,7 +530,7 @@ footer p {
 }
 
 .modal-box h3 {
-    margin: 10px 0;
+    margin: 20px 0;
     font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
 }
 
@@ -555,7 +539,6 @@ footer p {
     background-color: #fbfbfb;
     padding: 15px;
     border-radius: 20px;
-
 }
 
 .modal-text span {
@@ -569,6 +552,11 @@ footer p {
     line-height: 1.6;
     color: #333;
     margin-bottom: 5px;
+}
+.modal-close{font-family: "Fredoka", sans-serif;
+font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
+font-weight: bold;
+margin-top: 10px;
 }
 
 /* フワッと出てくるアニメーション*/

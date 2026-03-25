@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const modals = document.querySelectorAll(".modal");
 
     // 「閉じる」ボタンを全部取得
-    const closeButtons = document.querySelectorAll(".close");
+    const closeButtons = document.querySelectorAll(".modal-close");
 
     // 開く処理。それぞれ処理する
     // forEachとは？　配列の要素を一つずつ処理するためのメソッド
