@@ -150,6 +150,16 @@ html {
     transition: transform 0.3s;
 }
 
+/* トップへ戻るボタン！ */
+.home-link{
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    width: 50px;
+    height: auto;
+    z-index: 100;
+}
+
 /* h２のテキスト設定 */
 h2 {
     text-align: center;
@@ -399,11 +409,11 @@ footer p {
 /* about.html */
 
 /* タイムライン全体 */
-.timeline {
+.timeline-wrapper {
   position: relative;
   margin: 0 50px;
   border-left: 2px solid #ccc;
-  padding-left: 1rem;
+  padding-left: 11px;
 }
 
 .timeline-item {
@@ -442,19 +452,20 @@ margin: 10px;
 
 
 /* PC：左右に交互配置 */
+
 @media (min-width: 768px) {
-  .timeline {
+  .timeline-wrapper {
     position: relative;
     padding-left: 0;
     border-left: none;
   }
   
 /* タイムラインの縦線  PC*/
-  .timeline::before {
+  .timeline-wrapper::before {
     content: '';
     position: absolute;
-    top: 170px;
-    bottom: 172px;
+    top: 20px;
+    bottom: 0px;
     left: 50%;
     width: 2px;
     background: #ccc;
