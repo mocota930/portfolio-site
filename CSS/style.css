@@ -8,8 +8,9 @@
 /* ページ内リンクの遷移をなめらかに */
 html {
     scroll-behavior: smooth;
+    color: #333;
+    font-family: "Kiwi Maru", serif;
 }
-
 
 /* トップページ */
 .toppage {
@@ -144,11 +145,6 @@ html {
     transform: translateY(120px);
 }
 
-/* クリックした時にハンバーガーが展開し、文字が表示される
-.hamburger.is-open span {
-    opacity: 1;
-} */
-
 /* 動きを滑らかにする */
 .hamburger li {
     transition: transform 0.3s;
@@ -159,7 +155,8 @@ h2 {
     text-align: center;
     font-family: "Fredoka", sans-serif;
     color: #1500ff;
-    font-size: 50px;
+    /* min40px max50px */
+    font-size: clamp(2.5rem, 2.273rem + 1.14vw, 3.125rem);
     font-weight: 600;
     margin: 20px;
 }
@@ -191,14 +188,13 @@ h2 {
 }
 
 .about-wrapper p {
-    font-size: 16px;
+    font-size: clamp(1rem, 0.955rem + 0.23vw, 1.125rem);
     line-height: 1.6;
-    color: #333;
 }
 
 .about-wrapper p span {
     display: block;
-    font-size: 20px;
+    font-size: clamp(1.188rem, 1.142rem + 0.23vw, 1.313rem);
     font-weight: bold;
     margin-bottom: 12px;
 }
@@ -272,9 +268,12 @@ h2 {
 
 /* テキスト */
 .skill-name {
+    font-family: "Fredoka", sans-serif;
+    letter-spacing: 0.1em;
     margin-top: 12px;
-    font-size: clamp(1.188rem, 1.051rem + 0.68vw, 1.563rem);
-    font-weight: 700;
+    /* min20px max24px */
+    font-size: clamp(1.25rem, 1.159rem + 0.45vw, 1.5rem);
+    font-weight: 600;
     color: #e43632;
 }
 
@@ -283,7 +282,6 @@ h2 {
     margin: 10px 10px;
     font-size: 16px;
     line-height: 1.5;
-    color: #333;
 }
 
 .skill-text span {
@@ -349,10 +347,9 @@ h2 {
 }
 
 .plaid p {
-    font-size: clamp(0.938rem, 0.824rem + 0.57vw, 1.25rem);
+    font-size: clamp(1.063rem, 1.017rem + 0.23vw, 1.188rem);
     margin: 0 auto;
     text-align: center;
-    color: #333;
     font-weight: bold;
     padding-top: 30px;
     text-shadow: 0 2px 6px rgba(255, 255, 255, 0.9);
@@ -397,10 +394,104 @@ h2 {
 footer p {
     font-size: 20px;
     text-align: center;
-    color: #333;
 }
 
 /* about.html */
+
+/* タイムライン全体 */
+.timeline {
+  position: relative;
+  margin: 0 50px;
+  border-left: 2px solid #ccc;
+  padding-left: 1rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-block: 2rem;
+}
+
+.timeline-item time {
+    font-size: clamp(1.188rem, 1.119rem + 0.34vw, 1.375rem);
+  font-weight: bold;
+  color: #e43632;
+}
+.timeline-item h3 {
+    font-size: clamp(1.25rem, 1.08rem + 0.23vw, 1.375rem);
+    font-weight: bold;
+    margin: 10px 0;}
+
+.timeline-text {
+background-color: #4de4ea;
+padding: 15px;
+border-radius: 10px;
+margin: 10px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.2rem;
+  top: 0.25rem;
+  width: 12px;
+  height: 12px;
+  background: #e43632;
+  border: 7px solid #e43632;
+  border-radius: 50%;
+}
+
+
+/* PC：左右に交互配置 */
+@media (min-width: 768px) {
+  .timeline {
+    position: relative;
+    padding-left: 0;
+    border-left: none;
+  }
+  
+/* タイムラインの縦線  PC*/
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 170px;
+    bottom: 172px;
+    left: 50%;
+    width: 2px;
+    background: #ccc;
+  }
+
+  .timeline-item {
+    width: 50%;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+  }
+
+  .timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+  }
+  .timeline-text {
+    text-align: left;
+  }
+
+  .timeline-item::before {
+    top: 1rem;
+    left: auto;
+    right: -0.6rem;
+  }
+
+  .timeline-item:nth-child(even)::before {
+    left: -0.4rem;
+    right: auto;
+  }
+}
+
 
 /* works.html */
 /* ロゴ */
@@ -418,10 +509,9 @@ footer p {
 }
 
 /* 制作物一覧 */
-.works-html p {
+#works-html p {
     font-size: 16px;
     line-height: 1.6;
-    color: #333;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -550,7 +640,6 @@ footer p {
 .modal-text p {
     font-size: clamp(1rem, 0.977rem + 0.11vw, 1.063rem);
     line-height: 1.6;
-    color: #333;
     margin-bottom: 5px;
 }
 .modal-close{font-family: "Fredoka", sans-serif;
