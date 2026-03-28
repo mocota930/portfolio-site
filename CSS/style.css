@@ -151,7 +151,7 @@ html {
 }
 
 /* トップへ戻るボタン！ */
-.home-link{
+.home-link {
     position: fixed;
     bottom: 40px;
     right: 20px;
@@ -179,7 +179,7 @@ h2 {
 .section-inner {
     max-width: 1100px;
     margin: auto;
-    padding: 0 50px;
+    padding: 0 20px;
 }
 
 /* アバウト 自己紹介 */
@@ -193,7 +193,7 @@ h2 {
 
 .about-wrapper img {
     width: 300px;
-    height: 300px;
+    height: auto;
     border-radius: 50%;
 }
 
@@ -206,7 +206,7 @@ h2 {
     display: block;
     font-size: clamp(1.188rem, 1.142rem + 0.23vw, 1.313rem);
     font-weight: bold;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
 }
 
 /* もっと見るボタン */
@@ -231,31 +231,27 @@ h2 {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 50px;
 }
-
 
 /* 各スキル中央寄せ*/
 .skill-item {
     max-width: 300px;
     margin: 0 auto;
-    text-align: center;
-    /* background-color: #ffd0cf;
-    border-radius: 30px; */
 }
 
 /* ピザ */
 .pizza-wrap {
-    width: 100%;
+    max-width: 250px;
     aspect-ratio: 1 / 1;
     position: relative;
+    margin: 0 auto;
 }
 
 .pizza-slice {
     position: absolute;
     inset: 0;
     width: 100%;
-    height: 100%;
     object-fit: contain;
     transition: 0.4s ease;
     z-index: 3;
@@ -271,33 +267,36 @@ h2 {
     position: absolute;
     inset: 0;
     width: 100%;
-    height: 100%;
     object-fit: contain;
     z-index: 2;
 }
 
 /* テキスト */
+
 .skill-name {
     font-family: "Fredoka", sans-serif;
     letter-spacing: 0.1em;
-    margin-top: 12px;
-    /* min20px max24px */
-    font-size: clamp(1.25rem, 1.159rem + 0.45vw, 1.5rem);
+    /* min21px max25px */
+    font-size: clamp(1.313rem, 1.222rem + 0.45vw, 1.563rem);
     font-weight: 600;
     color: #e43632;
-}
-
-.skill-text {
-    max-width: 300px;
-    margin: 10px 10px;
-    font-size: 16px;
-    line-height: 1.5;
+    margin: 10px 0;
+    text-align: center;
 }
 
 .skill-text span {
     display: block;
-    font-size: 17px;
+    /* min18px max20px */
+    font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
     font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.skill-text {
+    max-width: 300px;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 /* work*/
@@ -407,102 +406,148 @@ footer p {
 }
 
 /* about.html */
+/* タイムラインのタイトル */
+.story-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    /* min19 maxx22*/
+    font-size: clamp(1.188rem, 1.119rem + 0.34vw, 1.375rem);
+}
+
+/* アイコン */
+.story-title::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url("../images/img/paws.svg") no-repeat center / contain;
+}
+
+.story-title::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url("../images/img/paws.svg") no-repeat center / contain;
+}
 
 /* タイムライン全体 */
 .timeline-wrapper {
-  position: relative;
-  margin: 0 50px;
-  border-left: 2px solid #ccc;
-  padding-left: 11px;
+    max-width: 1100px;
+    position: relative;
+    margin: 0 auto;
+    border-left: 2px solid #ccc;
+    padding-left: 11px;
 }
 
 .timeline-item {
-  position: relative;
-  margin-block: 2rem;
+    position: relative;
+    margin-block: 2rem;
 }
 
 .timeline-item time {
     font-size: clamp(1.188rem, 1.119rem + 0.34vw, 1.375rem);
-  font-weight: bold;
-  color: #e43632;
+    font-weight: bold;
+    color: #e43632;
 }
+
 .timeline-item h3 {
     font-size: clamp(1.25rem, 1.08rem + 0.23vw, 1.375rem);
     font-weight: bold;
-    margin: 10px 0;}
+    margin: 10px 0;
+}
 
 .timeline-text {
-background-color: #4de4ea;
-padding: 15px;
-border-radius: 10px;
-margin: 10px;
+    background-color: #4de4ea;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 .timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -1.2rem;
-  top: 0.25rem;
-  width: 12px;
-  height: 12px;
-  background: #e43632;
-  border: 7px solid #e43632;
-  border-radius: 50%;
+    content: '';
+    position: absolute;
+    left: -1.2rem;
+    top: 0.25rem;
+    width: 12px;
+    height: 12px;
+    background: #e43632;
+    border: 7px solid #e43632;
+    border-radius: 50%;
 }
 
 
 /* PC：左右に交互配置 */
 
 @media (min-width: 768px) {
-  .timeline-wrapper {
-    position: relative;
-    padding-left: 0;
-    border-left: none;
-  }
-  
-/* タイムラインの縦線  PC*/
-  .timeline-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    bottom: 0px;
-    left: 50%;
-    width: 2px;
-    background: #ccc;
-  }
+    .timeline-wrapper {
+        position: relative;
+        padding-left: 0;
+        border-left: none;
+    }
 
-  .timeline-item {
-    width: 50%;
-    padding: 1rem 2rem;
-    box-sizing: border-box;
-    position: relative;
-  }
+    /* タイムラインの縦線  PC*/
+    .timeline-wrapper::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        bottom: 0px;
+        left: 50%;
+        width: 2px;
+        background: #ccc;
+    }
 
-  .timeline-item:nth-child(odd) {
-    left: 0;
-    text-align: right;
-  }
+    .timeline-item {
+        width: 50%;
+        padding: 1rem 2rem;
+        box-sizing: border-box;
+        position: relative;
+    }
 
-  .timeline-item:nth-child(even) {
-    left: 50%;
-    text-align: left;
-  }
-  .timeline-text {
-    text-align: left;
-  }
+    .timeline-item:nth-child(odd) {
+        left: 0;
+        text-align: right;
+    }
 
-  .timeline-item::before {
-    top: 1rem;
-    left: auto;
-    right: -0.6rem;
-  }
+    .timeline-item:nth-child(even) {
+        left: 50%;
+        text-align: left;
+    }
 
-  .timeline-item:nth-child(even)::before {
-    left: -0.4rem;
-    right: auto;
-  }
+    .timeline-text {
+        text-align: left;
+    }
+
+    .timeline-item::before {
+        top: 1rem;
+        left: auto;
+        right: -0.6rem;
+    }
+
+    .timeline-item:nth-child(even)::before {
+        left: -0.4rem;
+        right: auto;
+    }
 }
 
+/* 趣味・好きなこと */
+.like-wrapper {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* flex-wrap: wrap; */
+}
+
+.like-container {
+    margin: 20px;
+}
+
+.like-container img {
+    border-radius: 10%;
+}
 
 /* works.html */
 /* ロゴ */
@@ -521,9 +566,10 @@ margin: 10px;
 
 /* 制作物一覧 */
 #works-html p {
-    font-size: 16px;
+    /* min16 max18 */
+    font-size: clamp(1rem, 0.955rem + 0.23vw, 1.125rem);
     line-height: 1.6;
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 20px;
 }
 
@@ -573,7 +619,6 @@ margin: 10px;
     justify-content: center;
     align-items: center;
     font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
-    font-family: "Kiwi Maru", serif;
     margin: 5px 0;
 }
 
@@ -653,10 +698,12 @@ margin: 10px;
     line-height: 1.6;
     margin-bottom: 5px;
 }
-.modal-close{font-family: "Fredoka", sans-serif;
-font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
-font-weight: bold;
-margin-top: 10px;
+
+.modal-close {
+    font-family: "Fredoka", sans-serif;
+    font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 /* フワッと出てくるアニメーション*/
@@ -696,41 +743,42 @@ margin-top: 10px;
         margin-top: 10px;
     }
 
+    /* ハンバーガーメニュー　各画像の位置 */
     .hamburger-wrapper ul {
         width: 60px;
         height: auto;
     }
 
     .hamburger-home {
-        z-index: 6;
         margin-top: 25px;
     }
 
     .hamburger-about {
-        z-index: 5;
         margin-top: 24px;
     }
 
     .hamburger-skill {
-        z-index: 4;
         margin-top: 32px;
     }
 
     .hamburger-work {
-        z-index: 3;
         margin-top: 38px;
     }
 
     .hamburger-contact {
-        z-index: 2;
         margin-top: 46px;
     }
 
     .hamburger-bottom {
-        z-index: 1;
         margin-top: 48px;
     }
 
+    /* トップへ戻るボタン 大きさ*/
+    .home-link {
+        width: 40px;
+    }
+
+    /* 横配置から縦配置へ */
     .about-wrapper {
         flex-direction: column;
         text-align: center;
@@ -738,13 +786,14 @@ margin-top: 10px;
 
     .about-wrapper img {
         width: 200px;
-        height: 200px;
     }
 
+    /* 本文だけ左揃え */
     .about-content p:nth-of-type(2) {
         text-align: left;
     }
 
+    /* もっと見るボタンの大きさ */
     .hd-btn {
         margin: 20px auto 0;
         width: 150px;
@@ -752,24 +801,28 @@ margin-top: 10px;
         z-index: 100;
     }
 
+    /* スキルセクション */
     .section-skill {
-        min-height: 100vh;
         display: flex;
-        align-items: center;
+        /* align-items: center; */
     }
 
+    /* ピザ円グラフ　スマホだと２列 */
     .skill-list {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .skill-text {
-        text-align: left;
+    /* プレミアプロの高さに他のスキルネームも合わせる */
+    .skill-name {
+        min-height: 63px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3px 0;
     }
 
-    .skill-text span {
-        font-size: 15px;
-        font-weight: bold;
-        text-align: center;
+    .skill-text {
+        text-align: left;
     }
 
     .slide-items__item img {
@@ -797,6 +850,25 @@ margin-top: 10px;
 
     .address-area address {
         margin: 0 30px;
+    }
+
+    /* about レスポンシブ */
+
+    .timeline-wrapper {
+        margin: 25px;
+    }
+
+    /* すき！ */
+    .like-wrapper {
+        margin: 25px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .like-container img {
+        display: block;
+        margin: 0 auto;
+        width: 70%;
     }
 
     /* works　レスポンシブ */

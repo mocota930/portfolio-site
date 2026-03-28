@@ -21,28 +21,30 @@
 	<!-- Tailwind CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-	<!-- jQuery スリック -->
-	<!-- slick -->
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-	<link rel="stylesheet" href="./CSS/slick-theme.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<!-- スタイルCSS -->
 	<link rel="stylesheet" href="./CSS/style.css">
 </head>
 
 <body id="works-html">
-	<main>
-		<h1 class="top-logo">
-			<header>
-				<a href="index.html">
-					<img src="./images/img/route66.png" alt="トップページに戻る">
-				</a>
-			</header>
-		</h1>
 
-		<h2>Work</h2>
-		<p>制作した作品を紹介しています。</p>
+	<header class="top-logo">
+		<h1>
+			<a href="index.html">
+				<img src="./images/img/route66.png" alt="トップページに戻る">
+			</a>
+		</h1>
+	</header>
+
+	<!-- ホームへ戻るボタン-->
+	<div class="home-link">
+		<a href="#home">
+			<img src="./images/img/home-link.webp" alt="トップへ戻る">
+		</a>
+	</div>
+
+	<main>
+		<h2 id="home">Work</h2>
+		<p class="text-center">制作した作品を紹介しています。</p>
 		<section class="works">
 			<!-- 制作物の掲載箇所 -->
 			<div class="works-wrapper">
@@ -146,7 +148,8 @@
 						</p>
 					</div>
 
-					<button class="mx-auto block px-6 py-2 rounded-full bg-yellow-400 text-blue-600 font-bold border-4 border-blue-600 shadow-[3px_3px_0_#2563eb] hover:-translate-y-1 active:translate-y-1 transition modal-close">close</button>
+					<button
+						class="mx-auto block px-6 py-2 rounded-full bg-yellow-400 text-blue-600 font-bold border-4 border-blue-600 shadow-[3px_3px_0_#2563eb] hover:-translate-y-1 active:translate-y-1 transition modal-close">close</button>
 				</div>
 
 			</div>
@@ -166,11 +169,12 @@
 							Illustrator / Photoshop</p>
 						<p><span>工夫した点など</span>
 							裏面は表面との統一感を意識し、余白やレイアウトのバランスを揃えることで一貫した世界観を持たせました。<br>
-容疑者の写真は手配書のように配置し、物語性とミステリー要素を視覚的に表現しています。<br>
-また、あえてラフな配置や紙の質感を取り入れることで、不穏さやリアリティを演出しました。</p>
+							容疑者の写真は手配書のように配置し、物語性とミステリー要素を視覚的に表現しています。<br>
+							また、あえてラフな配置や紙の質感を取り入れることで、不穏さやリアリティを演出しました。</p>
 					</div>
 
-					<button class="mx-auto block px-6 py-2 rounded-full bg-yellow-400 text-blue-600 font-bold border-4 border-blue-600 shadow-[3px_3px_0_#2563eb] hover:-translate-y-1 active:translate-y-1 transition modal-close">close</button>
+					<button
+						class="mx-auto block px-6 py-2 rounded-full bg-yellow-400 text-blue-600 font-bold border-4 border-blue-600 shadow-[3px_3px_0_#2563eb] hover:-translate-y-1 active:translate-y-1 transition modal-close">close</button>
 				</div>
 
 			</div>
@@ -191,12 +195,13 @@
 							Illustrator / Premiere Pro</p>
 						<p><span>工夫した点など</span>
 							創造社リカレントスクール広島校の公式サイトとトーンを統一するため、実際にサイトで使用されている配色を動画内にも取り入れました。<br>
-また、動画前半では受講を検討している方が抱える悩みや不安を提示し、後半にかけてコース内容を紹介する構成とすることで、自然に説明会への導線につなげています。<br>
-さらに、全体を通してアニメーションを多く取り入れることで視覚的な変化を持たせ、視聴者の興味を引きながら離脱を防ぐ工夫を行いました。
-					</p>
+							また、動画前半では受講を検討している方が抱える悩みや不安を提示し、後半にかけてコース内容を紹介する構成とすることで、自然に説明会への導線につなげています。<br>
+							さらに、全体を通してアニメーションを多く取り入れることで視覚的な変化を持たせ、視聴者の興味を引きながら離脱を防ぐ工夫を行いました。
+						</p>
 					</div>
 
-					<button class="mx-auto block px-6 py-2 rounded-full bg-yellow-400 text-blue-600 font-bold border-4 border-blue-600 shadow-[3px_3px_0_#2563eb] hover:-translate-y-1 active:translate-y-1 transition modal-close">close</button>
+					<button
+						class="mx-auto block px-6 py-2 rounded-full bg-yellow-400 text-blue-600 font-bold border-4 border-blue-600 shadow-[3px_3px_0_#2563eb] hover:-translate-y-1 active:translate-y-1 transition modal-close">close</button>
 				</div>
 
 				<!-- モーダル4 -->
@@ -215,13 +220,14 @@
 							Illustrator / Photoshop</p>
 						<p><span>工夫した点など</span>
 							架空のパン屋「ベーカリーペコラ」のショップカードを制作しました。<br>
-ファミリー層をターゲットに、親しみやすさや楽しさが伝わるデザインを意識しています。<br>
-オーナーが羊好きということや、「ペコラ」が羊を意味することから、ロゴに羊を採用し、角をクロワッサンにすることでベーカリーらしさを表現しました。<br>
-枠は羊の毛をイメージしたモコモコとした形状にし、パンの写真をステッカー風に配置することで賑やかさを演出しています。<br>
-また、配色やフォントにも温かみのある要素を取り入れ、親しみやすい印象に仕上げました。</p>
+							ファミリー層をターゲットに、親しみやすさや楽しさが伝わるデザインを意識しています。<br>
+							オーナーが羊好きということや、「ペコラ」が羊を意味することから、ロゴに羊を採用し、角をクロワッサンにすることでベーカリーらしさを表現しました。<br>
+							枠は羊の毛をイメージしたモコモコとした形状にし、パンの写真をステッカー風に配置することで賑やかさを演出しています。<br>
+							また、配色やフォントにも温かみのある要素を取り入れ、親しみやすい印象に仕上げました。</p>
 					</div>
 
-					<button class="mx-auto block px-6 py-2 rounded-full bg-yellow-400 text-blue-600 font-bold border-4 border-blue-600 shadow-[3px_3px_0_#2563eb] hover:-translate-y-1 active:translate-y-1 transition modal-close">close</button>
+					<button
+						class="mx-auto block px-6 py-2 rounded-full bg-yellow-400 text-blue-600 font-bold border-4 border-blue-600 shadow-[3px_3px_0_#2563eb] hover:-translate-y-1 active:translate-y-1 transition modal-close">close</button>
 				</div>
 
 			</div>
@@ -241,13 +247,14 @@
 							Illustrator / Photoshop</p>
 						<p><span>工夫した点など</span>
 							倉敷美観地区のグルメ紹介動画のサムネイルを制作しました。<br>
-和風の街並みをイメージし、和柄や雲のモチーフを取り入れることで地域の雰囲気を表現しています。<br>
-文字には金色のグラデーションを使用し上品さを出しつつ、「3選」は赤色で強調し視認性を高めました。<br>
-使用した写真はPhotoshopで色のトーンを調整し、3枚並べた際にも統一感が出るようにしています。<br>
-また、文字のジャンプ率や配置にメリハリをつけ、半透明の帯を用いることで読みやすさにも配慮しました。</p>
+							和風の街並みをイメージし、和柄や雲のモチーフを取り入れることで地域の雰囲気を表現しています。<br>
+							文字には金色のグラデーションを使用し上品さを出しつつ、「3選」は赤色で強調し視認性を高めました。<br>
+							使用した写真はPhotoshopで色のトーンを調整し、3枚並べた際にも統一感が出るようにしています。<br>
+							また、文字のジャンプ率や配置にメリハリをつけ、半透明の帯を用いることで読みやすさにも配慮しました。</p>
 					</div>
 
-					<button class="mx-auto block px-6 py-2 rounded-full bg-yellow-400 text-blue-600 font-bold border-4 border-blue-600 shadow-[3px_3px_0_#2563eb] hover:-translate-y-1 active:translate-y-1 transition modal-close">close</button>
+					<button
+						class="mx-auto block px-6 py-2 rounded-full bg-yellow-400 text-blue-600 font-bold border-4 border-blue-600 shadow-[3px_3px_0_#2563eb] hover:-translate-y-1 active:translate-y-1 transition modal-close">close</button>
 				</div>
 
 			</div>
@@ -269,15 +276,44 @@
 							テキストテキスト</p>
 					</div>
 
-					<button class="mx-auto block px-6 py-2 rounded-full bg-yellow-400 text-blue-600 font-bold border-4 border-blue-600 shadow-[3px_3px_0_#2563eb] hover:-translate-y-1 active:translate-y-1 transition modal-close">close</button>
+					<button
+						class="mx-auto block px-6 py-2 rounded-full bg-yellow-400 text-blue-600 font-bold border-4 border-blue-600 shadow-[3px_3px_0_#2563eb] hover:-translate-y-1 active:translate-y-1 transition modal-close">close</button>
 				</div>
 
 			</div>
 
 			<!-- 制作意図 -->
 			<div>
-<h3>ポートフォリオ制作にあたって</h3>
-<p></p>
+				<h3>ポートフォリオ制作にあたって</h3>
+				<div>
+					<p>
+						コンセプト
+					</p>
+					<p>
+						本ポートフォリオでは、アメリカンダイナーをコンセプトに制作しました。 ポートフォリオは単に作品を見せる場ではなく、自分のことを知ってもらう“体験の場”だと考えています。
+						そこで、訪れた人が楽しみながら閲覧できるよう、飲食店をテーマにしたデザインを採用しました。
+					</p>
+				</div>
+
+				<div>
+					<p>制作で意識したこと</p>
+					<p>デザイン面では、アメリカンダイナーをイメージし、ハンバーガーメニューをハンバーガーのアイコンに置き換えるなど、遊び心のある表現を取り入れました。
+						また、スキルの熟練度をピザの円グラフで表現するなど、各要素に食べ物のモチーフを取り入れることで、世界観に統一感を持たせています。
+						配色についても、アメリカンダイナーらしいビビッドなカラーを意識しています。
+						見た目の楽しさだけでなく、情報が整理されて伝わるよう、レイアウトや構成にも配慮しました。</p>
+				</div>
+
+				<div>
+					<p>苦戦した点と改善</p>
+					<p>制作にあたっては、知識が十分でない状態からスタートし、学びながらコーディングを進めました。
+						そのため、後からJavaScriptやTailwind CSSを学ぶ中で「最初からこう設計すればよかった」と感じる場面も多く、試行錯誤の連続でした。
+						しかし、その過程で実装方法や設計の重要性を実感することができました。</p>
+				</div>
+				<div>
+					<p>今後の課題</p>
+					<p>今後は、より効率的な設計や実装ができるよう、基礎知識の定着と技術力の向上に取り組んでいきたいと考えています。</p>
+				</div>
+
 			</div>
 		</section>
 
@@ -294,14 +330,7 @@
 							30808sugimotomoe@gmail.com
 						</a>
 					</address>
-					<!-- <div class="SNS-icon">
-						<a href="#" class="X">
-							<img src="" alt="xのアカウント">
-						</a>
-						<a href="#" class="Instagram">
-							<img src="" alt="Instagramのアカウント">
-						</a>
-					</div> -->
+			
 				</div>
 			</div>
 		</section>
@@ -310,7 +339,6 @@
 		<p><small>&copy; 2026 sugimoto moe</small></p>
 	</footer>
 	<!-- js -->
-	<script src="./js/slider.js"></script>
 	<script src="./js/hamburger.js"></script>
 	<script src="./js/modal.js"></script>
 	<script src="./js/pizza.js"></script>
