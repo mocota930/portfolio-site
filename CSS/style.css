@@ -10,6 +10,7 @@ html {
     scroll-behavior: smooth;
     color: #333;
     font-family: "Kiwi Maru", serif;
+    /* background-color: #fffdf7; */
 }
 
 /* トップページ */
@@ -168,7 +169,7 @@ h2 {
     /* min40px max50px */
     font-size: clamp(2.5rem, 2.273rem + 1.14vw, 3.125rem);
     font-weight: 600;
-    margin: 20px;
+    margin: 40px 0 15px 0;
 }
 
 .section-contact h2 {
@@ -534,19 +535,39 @@ footer p {
 }
 
 /* 趣味・好きなこと */
-.like-wrapper {
+    .like-wrapper {
     display: flex;
+    flex-wrap: wrap;
     max-width: 1100px;
     margin: 0 auto;
-    /* flex-wrap: wrap; */
+    padding: 20px;
+    gap: 10px;
 }
-
+/* PC横並び４個 */
 .like-container {
-    margin: 20px;
+    flex: 1 1 calc(25% - 20px);
+    padding: 10px;
+}
+.like-container:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    border-radius: 10%;
 }
 
 .like-container img {
     border-radius: 10%;
+    display: block;
+}
+.like-container img:hover {
+    border-radius: 10%;
+    display: block;
+    
+}
+.like-container span {
+    /* min18 max19 */
+    font-size:clamp(1.125rem, 1.102rem + 0.11vw, 1.188rem);
+    font-weight: bold;
+    margin: 15px 0;
 }
 
 /* works.html */
@@ -574,8 +595,8 @@ footer p {
 }
 
 .works-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1100px;
+    margin: 20px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
@@ -588,9 +609,9 @@ footer p {
     font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
 }
 
-/* 制作物ごとに枠をつける。色は仮 */
+/* 制作物ごとに枠をつける。 */
 .work-container {
-    /* border: #1500ff solid 5px; */
+    /* border: #1500ff dashed 5px; */
     background-color: #4de4ea;
     border-radius: 25px;
     padding: 30px;
@@ -620,6 +641,7 @@ footer p {
     align-items: center;
     font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
     margin: 5px 0;
+    color: #fbfbfb;
 }
 
 
@@ -688,13 +710,16 @@ footer p {
 }
 
 .modal-text span {
-    color: #1500ff;
+    color: #e43632;
     font-weight: bold;
     display: block;
+    /* min18 max21 */
+    font-size: clamp(1.125rem, 1.057rem + 0.34vw, 1.313rem);
 }
 
 .modal-text p {
-    font-size: clamp(1rem, 0.977rem + 0.11vw, 1.063rem);
+    /* min16 max18 */
+    font-size: clamp(1rem, 0.955rem + 0.23vw, 1.125rem);
     line-height: 1.6;
     margin-bottom: 5px;
 }
@@ -705,7 +730,6 @@ footer p {
     font-weight: bold;
     margin-top: 10px;
 }
-
 /* フワッと出てくるアニメーション*/
 /* 0.4sで大きく */
 .modal.active .modal-box {
@@ -723,6 +747,45 @@ footer p {
         transform: scale(1);
     }
 }
+
+
+/* ポートフォリオ制作にあたって */
+
+.production-intent {
+    /* background-color: #4de4ea; */
+    padding: 20px;
+    margin-top: 50px;
+}
+.production-intent h2 {
+    margin: 20px;
+    /* min22 max30 */
+    font-size: clamp(1.375rem, 1.193rem + 0.91vw, 1.875rem);
+}
+
+.intent-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+    margin: 20px auto;
+}
+.intent-container h3 {
+    color: #e43632;
+    letter-spacing: 0.05em;
+    font-size: clamp(1.25rem, 1.159rem + 0.45vw, 1.5rem);
+  border-bottom: 3px dotted #1500ff;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+.intent-container{
+    /* background-color: #fefefe; */
+    border-radius: 20px;
+    padding: 20px;
+    height: 370px;
+}
+
 
 /* レスポンシブ対応 */
 
@@ -863,13 +926,17 @@ footer p {
         margin: 25px;
         flex-direction: column;
         justify-content: center;
+        flex-wrap: nowrap;
     }
 
     .like-container img {
         display: block;
         margin: 0 auto;
-        width: 70%;
+        width: 80%;
     }
+    .like-container:hover {
+    transform: none;
+}
 
     /* works　レスポンシブ */
     .top-logo {
