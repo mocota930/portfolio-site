@@ -466,6 +466,7 @@ footer p {
     padding: 15px;
     border-radius: 10px;
     margin: 10px;
+    display: none;
 }
 
 .timeline-item::before {
@@ -506,6 +507,7 @@ footer p {
         padding: 1rem 2rem;
         box-sizing: border-box;
         position: relative;
+        cursor: pointer;
     }
 
     .timeline-item:nth-child(odd) {
@@ -517,6 +519,8 @@ footer p {
         left: 50%;
         text-align: left;
     }
+
+
 
     .timeline-text {
         text-align: left;
@@ -535,7 +539,7 @@ footer p {
 }
 
 /* 趣味・好きなこと */
-    .like-wrapper {
+.like-wrapper {
     display: flex;
     flex-wrap: wrap;
     max-width: 1100px;
@@ -543,11 +547,13 @@ footer p {
     padding: 20px;
     gap: 10px;
 }
+
 /* PC横並び４個 */
 .like-container {
     flex: 1 1 calc(25% - 20px);
     padding: 10px;
 }
+
 .like-container:hover {
     transform: scale(1.2);
     transition: transform 0.3s ease;
@@ -558,14 +564,16 @@ footer p {
     border-radius: 10%;
     display: block;
 }
+
 .like-container img:hover {
     border-radius: 10%;
     display: block;
-    
+
 }
+
 .like-container span {
     /* min18 max19 */
-    font-size:clamp(1.125rem, 1.102rem + 0.11vw, 1.188rem);
+    font-size: clamp(1.125rem, 1.102rem + 0.11vw, 1.188rem);
     font-weight: bold;
     margin: 15px 0;
 }
@@ -593,6 +601,7 @@ footer p {
     /* text-align: center; */
     margin-bottom: 20px;
 }
+
 
 .works-wrapper {
     max-width: 1100px;
@@ -730,6 +739,7 @@ footer p {
     font-weight: bold;
     margin-top: 10px;
 }
+
 /* フワッと出てくるアニメーション*/
 /* 0.4sで大きく */
 .modal.active .modal-box {
@@ -750,12 +760,19 @@ footer p {
 
 
 /* ポートフォリオ制作にあたって */
+/* きかない？？なぜ */
+.production-intent h2 {
+    font-size: clamp(1.75rem, 1.705rem + 0.23vw, 1.875rem);
+}
 
 .production-intent {
-    /* background-color: #4de4ea; */
+    border: #1500ff solid 5px;
+    border-radius: 30px;
+    width: calc(100% - 180px);
+    margin: 50px auto 0;
     padding: 20px;
-    margin-top: 50px;
 }
+
 .production-intent h2 {
     margin: 20px;
     /* min22 max30 */
@@ -763,27 +780,31 @@ footer p {
 }
 
 .intent-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 1100px;
+    gap: 20px;
+    max-width: 1100px;
     margin: 20px auto;
 }
+
 .intent-container h3 {
     color: #e43632;
     letter-spacing: 0.05em;
     font-size: clamp(1.25rem, 1.159rem + 0.45vw, 1.5rem);
-  border-bottom: 3px dotted #1500ff;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-  position: relative;
-  display: inline-block;
+    border-bottom: 3px dotted #1500ff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
 }
-.intent-container{
+
+.intent-container {
     /* background-color: #fefefe; */
-    border-radius: 20px;
+    border: solid #1500ff 3px;
+    border-radius: 30px;
     padding: 20px;
-    height: 370px;
+    height: auto;
+    margin: 20px;
 }
 
 
@@ -934,9 +955,10 @@ footer p {
         margin: 0 auto;
         width: 80%;
     }
+
     .like-container:hover {
-    transform: none;
-}
+        transform: none;
+    }
 
     /* works　レスポンシブ */
     .top-logo {
