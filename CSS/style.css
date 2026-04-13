@@ -160,7 +160,10 @@ html {
     height: auto;
     z-index: 100;
 }
-
+.home-link:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
 /* h２のテキスト設定 */
 h2 {
     text-align: center;
@@ -213,15 +216,43 @@ h2 {
 /* もっと見るボタン */
 
 .hd-btn {
+    position: relative;
     display: block;
     margin: 30px auto 0;
     width: 200px;
-    height: auto;
-    z-index: 100;
 }
 
 .hd-btn img {
     width: 100%;
+    display: block;
+}
+
+/* うえに置く画像 */
+.btn-default {
+    position: relative;
+    z-index: 2;
+}
+
+/* かじられたボタン*/
+.btn-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* ホバーで上を消す */
+.hd-btn:hover .btn-default {
+    opacity: 0;
+}
+
+/* ホバーで浮く */
+.hd-btn {
+    transition: transform 0.3s ease;
+}
+
+.hd-btn:hover {
+    transform: translateY(-5px);
 }
 
 /* スキル */
@@ -252,7 +283,8 @@ h2 {
 .pizza-slice {
     position: absolute;
     inset: 0;
-    width: 100%;
+    width: 95%;
+    margin: auto;
     object-fit: contain;
     transition: 0.4s ease;
     z-index: 3;
@@ -760,27 +792,42 @@ footer p {
 
 
 /* ポートフォリオ制作にあたって */
-/* きかない？？なぜ */
+/* 星とh２を横並び */
 .production-intent h2 {
-    font-size: clamp(1.75rem, 1.705rem + 0.23vw, 1.875rem);
+font-size:clamp(2rem, 1.864rem + 0.68vw, 2.375rem);
+margin: 0;
+}
+.intent-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
+.intent-title .star {
+    width: 90px;
+    height: 60px;
+    display: block;
+}
+
+.intent-title .star.left {
+    background: url("../images/img/star-left.svg") no-repeat center / contain;
+}
+
+.intent-title .star.right {
+    background: url("../images/img/star-right.svg") no-repeat center / contain;
+}
+/* 枠全体の背景色と余白等 */
 .production-intent {
-    border: #1500ff solid 5px;
+    /* border: #1500ff solid 5px; */
+    background-color: #4de4ea;
     border-radius: 30px;
     width: calc(100% - 180px);
     margin: 50px auto 0;
     padding: 20px;
 }
 
-.production-intent h2 {
-    margin: 20px;
-    /* min22 max30 */
-    font-size: clamp(1.375rem, 1.193rem + 0.91vw, 1.875rem);
-}
-
 .intent-wrapper {
-    gap: 20px;
     max-width: 1100px;
     margin: 20px auto;
 }
@@ -788,7 +835,7 @@ footer p {
 .intent-container h3 {
     color: #e43632;
     letter-spacing: 0.05em;
-    font-size: clamp(1.25rem, 1.159rem + 0.45vw, 1.5rem);
+    font-size: clamp(1.563rem, 1.449rem + 0.57vw, 1.875rem);
     border-bottom: 3px dotted #1500ff;
     padding-bottom: 5px;
     margin-bottom: 10px;
@@ -796,11 +843,41 @@ footer p {
     display: inline-block;
     font-family: "Fredoka", sans-serif;
     font-weight: 500;
+    padding-left: 55px;
 }
 
+.intent-container h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* 個別アイコンせってい*/
+.icon-concept::before {
+    background-image: url("../images/img/soda-icon.PNG");
+}
+
+.icon-key::before {
+    background-image: url("../images/img/record-icon.PNG");
+}
+
+.icon-challenge::before {
+    background-image: url("../images/img/potato-icon.PNG");
+}
+
+.icon-next::before {
+    background-image: url("../images/img/hero02.png");
+}
+/* 各説明文の背景色 */
 .intent-container {
-    /* background-color: #fefefe; */
-    border: solid #1500ff 3px;
+    background-color: #fefefe;
+    /* border: solid #1500ff 3px; */
     border-radius: 30px;
     padding: 20px;
     height: auto;
@@ -987,6 +1064,15 @@ footer p {
         max-width: 350px;
         margin: 30 auto;
     }
+
+    /* 制作意図の星の位置 */
+ .intent-title {
+    gap: 0px;
+}
+    /* 制作意図の大枠 */
+    .production-intent {
+    width: calc(100% - 40px);
+}
 }
 
 /* @media (max-width: 384px) {
