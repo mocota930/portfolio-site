@@ -1,9 +1,18 @@
 @charset "utf-8";
 
 
+
 /* * {
     border: solid 1px magenta;
 } */
+
+:root {
+    --yellow: #facd22;
+    --blue: #1500ff;
+    --turquoise: #4de4ea;
+    --red: #e43632;
+    --white: #fbfbfb;
+}
 
 /* ページ内リンクの遷移をなめらかに */
 html {
@@ -15,7 +24,7 @@ html {
 
 /* トップページ */
 .toppage {
-    background-color: #4de4ea;
+    background-color: var(--turquoise);
     border-radius: 50px;
     height: 95vh;
     margin: 30px 50px;
@@ -47,7 +56,7 @@ html {
 .hero-title {
     font-family: "Fredoka", sans-serif;
     font-weight: 700;
-    color: #facd22;
+    color: var(--yellow);
     letter-spacing: 0.05em;
     font-size: clamp(2rem, -0.682rem + 13.41vw, 9.375rem);
 }
@@ -160,15 +169,17 @@ html {
     height: auto;
     z-index: 100;
 }
-.home-link:hover{
+
+.home-link:hover {
     transform: scale(1.2);
     transition: transform 0.3s ease;
 }
+
 /* h２のテキスト設定 */
 h2 {
     text-align: center;
     font-family: "Fredoka", sans-serif;
-    color: #1500ff;
+    color: var(--blue);
     /* min40px max50px */
     font-size: clamp(2.5rem, 2.273rem + 1.14vw, 3.125rem);
     font-weight: 600;
@@ -312,7 +323,7 @@ h2 {
     /* min21px max25px */
     font-size: clamp(1.313rem, 1.222rem + 0.45vw, 1.563rem);
     font-weight: 600;
-    color: #e43632;
+    color: var(--red);
     margin: 10px 0;
     text-align: center;
 }
@@ -374,7 +385,7 @@ h2 {
 
 .slick-prev:before,
 .slick-next:before {
-    color: #e43632;
+    color: var(--red);
     font-size: 40px;
 }
 
@@ -406,7 +417,7 @@ h2 {
 
 .address-area address {
     justify-content: center;
-    background-color: #e43632;
+    background-color: var(--red);
     padding: 7px 25px;
     max-width: 500px;
     margin: 0 auto;
@@ -417,7 +428,7 @@ h2 {
 
 .address-area a {
     font-family: "Fredoka", sans-serif;
-    color: #fbfbfb;
+    color: var(--white);
     font-size: clamp(1.25rem, 1.023rem + 1.14vw, 1.875rem);
     font-weight: 600;
     letter-spacing: 0.05em;
@@ -484,7 +495,7 @@ footer p {
 .timeline-item time {
     font-size: clamp(1.188rem, 1.119rem + 0.34vw, 1.375rem);
     font-weight: bold;
-    color: #e43632;
+    color: var(--red);
 }
 
 .timeline-item h3 {
@@ -494,7 +505,7 @@ footer p {
 }
 
 .timeline-text {
-    background-color: #4de4ea;
+    background-color: var(--turquoise);
     padding: 15px;
     border-radius: 10px;
     margin: 10px;
@@ -508,8 +519,8 @@ footer p {
     top: 0.25rem;
     width: 12px;
     height: 12px;
-    background: #e43632;
-    border: 7px solid #e43632;
+    background: var(--red);
+    border: 7px solid var(--red);
     border-radius: 50%;
 }
 
@@ -680,7 +691,8 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
+    /* min20 max23 */
+    font-size: clamp(1.25rem, 1.182rem + 0.34vw, 1.438rem);
     margin: 5px 0;
     color: #fbfbfb;
 }
@@ -715,13 +727,11 @@ footer p {
 }
 
 .modal-box {
-    background-color: #4de4ea;
+    background-color: var(--turquoise);
     margin: 10px auto;
     padding: 20px;
-    width: 100%;
-    max-width: 650px;
+    max-width: 700px;
     border-radius: 20px;
-    text-align: center;
 }
 
 .modal-box img {
@@ -739,30 +749,42 @@ footer p {
 }
 
 .modal-box h3 {
-    margin: 20px 0;
-    font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
+    margin: 10px 0;
+    /* min26 max29 */
+    font-size: clamp(1.625rem, 1.557rem + 0.34vw, 1.813rem);
+    text-align: center;
+    color: var(--blue);
+}
+
+span.marker {
+    background-image: repeating-linear-gradient(-45deg,
+            var(--yellow) 0, var(--yellow) 4px,
+            transparent 4px, transparent 7px);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 100% 30%;
 }
 
 /* テキストエリアに白背景をつける */
 .modal-text {
-    background-color: #fbfbfb;
+    background-color: var(--white);
     padding: 15px;
     border-radius: 20px;
 }
 
 .modal-text span {
-    color: #e43632;
+    color: var(--red);
     font-weight: bold;
-    display: block;
-    /* min18 max21 */
-    font-size: clamp(1.125rem, 1.057rem + 0.34vw, 1.313rem);
+    display: inline-block;
+    /* min22 max25 */
+    font-size: clamp(1.375rem, 1.307rem + 0.34vw, 1.563rem);
 }
 
 .modal-text p {
     /* min16 max18 */
     font-size: clamp(1rem, 0.955rem + 0.23vw, 1.125rem);
     line-height: 1.6;
-    margin-bottom: 5px;
+
 }
 
 .modal-close {
@@ -794,9 +816,10 @@ footer p {
 /* ポートフォリオ制作にあたって */
 /* 星とh２を横並び */
 .production-intent h2 {
-font-size:clamp(2rem, 1.864rem + 0.68vw, 2.375rem);
-margin: 0;
+    font-size: clamp(2rem, 1.864rem + 0.68vw, 2.375rem);
+    margin: 0;
 }
+
 .intent-title {
     display: flex;
     align-items: center;
@@ -817,12 +840,13 @@ margin: 0;
 .intent-title .star.right {
     background: url("../images/img/star-right.svg") no-repeat center / contain;
 }
+
 /* 枠全体の背景色と余白等 */
 .production-intent {
     /* border: #1500ff solid 5px; */
-    background-color: #4de4ea;
+    background-color: var(--turquoise);
     border-radius: 30px;
-    width: calc(100% - 180px);
+    width: calc(100% - 200px);
     margin: 50px auto 0;
     padding: 20px;
 }
@@ -833,10 +857,10 @@ margin: 0;
 }
 
 .intent-container h3 {
-    color: #e43632;
+    color: var(--red);
     letter-spacing: 0.05em;
     font-size: clamp(1.563rem, 1.449rem + 0.57vw, 1.875rem);
-    border-bottom: 3px dotted #1500ff;
+    border-bottom: 3px dotted var(--blue);
     padding-bottom: 5px;
     margin-bottom: 10px;
     position: relative;
@@ -874,9 +898,10 @@ margin: 0;
 .icon-next::before {
     background-image: url("../images/img/hero02.png");
 }
+
 /* 各説明文の背景色 */
 .intent-container {
-    background-color: #fefefe;
+    background-color: var(--white);
     /* border: solid #1500ff 3px; */
     border-radius: 30px;
     padding: 20px;
@@ -1005,7 +1030,7 @@ margin: 0;
 
     .slick-prev:before,
     .slick-next:before {
-        color: #e43632;
+        color: var(--red);
         font-size: 30px;
     }
 
@@ -1051,7 +1076,7 @@ margin: 0;
     .works-wrapper {
         grid-template-columns: none;
         margin: 0 auto;
-        max-width: 350px;
+        width: calc(100% - 40px);
         padding: 0;
     }
 
@@ -1061,18 +1086,19 @@ margin: 0;
 
     /* モーダル　個々 */
     .modal-box {
-        max-width: 350px;
+        width: calc(100% - 40px);
         margin: 30 auto;
     }
 
     /* 制作意図の星の位置 */
- .intent-title {
-    gap: 0px;
-}
+    .intent-title {
+        gap: 0px;
+    }
+
     /* 制作意図の大枠 */
     .production-intent {
-    width: calc(100% - 40px);
-}
+        width: calc(100% - 40px);
+    }
 }
 
 /* @media (max-width: 384px) {
