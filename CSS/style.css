@@ -786,7 +786,11 @@ span.marker {
     line-height: 1.6;
 
 }
-
+.modal-text a{
+    color: var(--blue);
+    text-decoration: underline;
+    font-weight: bold;
+}
 .modal-close {
     font-family: "Fredoka", sans-serif;
     font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
