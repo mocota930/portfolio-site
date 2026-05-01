@@ -1,7 +1,7 @@
 $(function () {
     $('.timeline-item').click(function () {
         var $text = $(this).find('.timeline-text');
-        var $icon = $(this).find('span');
+        var $icon = $(this).find('.timeline-title span');
 
         if ($text.is(':visible')) {
             $text.stop().slideUp();

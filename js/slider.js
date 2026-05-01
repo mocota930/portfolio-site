@@ -4,6 +4,10 @@ $('.slide-items').slick({
     centerMode: true,
     centerPadding: '60px',
     slidesToShow: 3,
+    // 自動再生追加　4/23追加
+    autoplay: true,
+    autoplaySpeed: 2000,
+
     responsive: [
         {
             breakpoint: 768,
@@ -19,7 +23,7 @@ $('.slide-items').slick({
             settings: {
                 arrows: true,
                 centerMode: false,
-                centerPadding: '40px',
+                centerPadding: '0px',
                 slidesToShow: 1
             }
         }
