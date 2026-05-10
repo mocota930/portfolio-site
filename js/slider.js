@@ -6,7 +6,7 @@ $('.slide-items').slick({
     slidesToShow: 3,
     // 自動再生追加　4/23追加
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1800,
 
     responsive: [
         {
